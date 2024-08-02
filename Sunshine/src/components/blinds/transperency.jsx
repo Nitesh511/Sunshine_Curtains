@@ -14,13 +14,13 @@ const ChooseTransparency = ({title,title1, title2, title3, img1, img2, img3}) =>
         <div className="bg-blue-500 text-white font-bold py-2 rounded-lg">
         {title3}
         </div>
-        <div>
+        <div className='-mt-6'>
           <img src={img1} alt="Blockout" className="rounded-lg" />
         </div>
-        <div>
+        <div className='-mt-6'> 
           <img src={img2} alt="Light Filter" className="rounded-lg" />
         </div>
-        <div>
+        <div className='-mt-6'>
           <img src={img3} alt="Screen" className="rounded-lg" />
         </div>
       </div>

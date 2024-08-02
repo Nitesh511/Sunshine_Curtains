@@ -52,15 +52,15 @@ const Navbar = () => {
             <div 
                 className={`bg-white text-black ${isOpen ? 'block' : 'hidden'} lg:block`} // to show for lg screen hie fot 
             >
-                <div className="container mx-auto px-4 py-4 flex flex-col lg:flex-row justify-between ">
-                    <ul className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6 ml-0 md:ml-32">
+                <div className="container mx-auto px-4 py-4 flex flex-col lg:flex-row justify-between border-b-4 border-gray-300 ">
+                    <ul className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-6 ml-0 md:ml-10 text-lg  ">
                         
-                        <li><Link to="/blinds" className="hover:text-gray-400">BLINDS</Link></li>
+                        <li><Link to="/blinds" className="hover:text-gray-400  ">BLINDS</Link></li>
                         <li><Link to={"/curtains"} className="hover:text-gray-400">CURTAINS</Link></li>
                         <li><Link to={"/shutters"} className="hover:text-gray-400">SHUTTERS</Link></li>
-                        <li><a href="#" className="hover:text-gray-400">SECURITY</a></li>
-                        <li><a href="#" className="hover:text-gray-400">AWNINGS</a></li>
-                        <li><a href="#" className="hover:text-gray-400">COMMERCIAL</a></li>
+                        <li><Link to={"/"} className="hover:text-gray-400">SECURITY</Link></li>
+                        <li><Link to={"/awnings"} className="hover:text-gray-400">AWNINGS</Link></li>
+                        <li><Link to={"/commercial"} className="hover:text-gray-400">COMMERCIAL</Link></li>
                         <li><a href="#" className="hover:text-gray-400">CONTACT US</a></li>
                         <li><a href="#" className="hover:text-gray-400">QUOTE OFF PLAN</a></li>
                         <li><a href="#" className="hover:text-gray-400">VIRTUAL SHOWROOM</a></li>
