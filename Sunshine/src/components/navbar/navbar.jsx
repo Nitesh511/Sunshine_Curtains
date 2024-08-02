@@ -57,7 +57,7 @@ const Navbar = () => {
                         
                         <li><Link to="/blinds" className="hover:text-gray-400">BLINDS</Link></li>
                         <li><Link to={"/curtains"} className="hover:text-gray-400">CURTAINS</Link></li>
-                        <li><a href="#" className="hover:text-gray-400">SHUTTERS</a></li>
+                        <li><Link to={"/shutters"} className="hover:text-gray-400">SHUTTERS</Link></li>
                         <li><a href="#" className="hover:text-gray-400">SECURITY</a></li>
                         <li><a href="#" className="hover:text-gray-400">AWNINGS</a></li>
                         <li><a href="#" className="hover:text-gray-400">COMMERCIAL</a></li>

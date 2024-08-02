@@ -8,7 +8,7 @@ const BookingBanner = ({
   imageUrl,
 }) => {
   return (
-    <div className="flex flex-col md:flex-row relative overflow-hidden">
+    <div className="flex flex-col md:flex-row relative overflow-hidden p-10">
       {/* Image on the left */}
       <div className="flex-shrink-0 w-full md:w-1/2">
         <img

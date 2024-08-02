@@ -100,24 +100,21 @@ export const Automating = () => {
         <li>Over 50 years experience manufacturing window blinds</li>
       </ul>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-  <div className="flex items-center justify-center">
-    <img
-      src="https://watsonblinds.com.au/wp-content/uploads/elementor/thumbs/web_hero_automation_v2-2-pf2mj3z423jnsu4eoivsw1e8hli3rxerlj54rllj8g.jpg"
-      alt="image"
-      className="w-full h-auto object-cover"
-    />
-  </div>
-  <div className="flex items-center justify-center">
-    <img
-      src="https://watsonblinds.com.au/wp-content/uploads/2021/08/Motorised.jpg"
-      alt="image"
-      className="w-full h-auto object-cover"
-    />
-  </div>
-</div>
-
-
-
+        <div className="flex items-center justify-center">
+          <img
+            src="https://watsonblinds.com.au/wp-content/uploads/elementor/thumbs/web_hero_automation_v2-2-pf2mj3z423jnsu4eoivsw1e8hli3rxerlj54rllj8g.jpg"
+            alt="image"
+            className="w-full h-auto object-cover"
+          />
+        </div>
+        <div className="flex items-center justify-center">
+          <img
+            src="https://watsonblinds.com.au/wp-content/uploads/2021/08/Motorised.jpg"
+            alt="image"
+            className="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
     </div>
   );
 };
