@@ -31,8 +31,8 @@ const Curtains_Page = () => {
       <div className="bg-white">
         <div className="container mx-auto py-3">
           {/* Main text centered at the top */}
-          <div className="flex flex-col items-center text-center mb-16">
-            <h1 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
+          <div className="flex flex-col items-center text-center mb-16 font-subheading">
+            <h1 className="text-3xl md:text-3xl font-bold text-blue-800 mb-4">
               Explore The Widest Range Of Custom-Made Curtains in Australia
             </h1>
             <p className="text-gray-700 mb-8">
@@ -40,7 +40,7 @@ const Curtains_Page = () => {
               Make.
             </p>
           </div>
-          <div className="-mt-32">
+          <div className="-mt-32 font-subheading">
             <FrontPage
               imageUrl="https://watsonblinds.com.au/wp-content/uploads/2018/05/curtains-01.jpg"
               title="Sheer Elegance"
@@ -51,9 +51,10 @@ const Curtains_Page = () => {
           </div>
         </div>
       </div>
-      <FeatureSection features={features} />
+      <div className="font-subheading">      <FeatureSection features={features} /></div>
 
-      <div className="container mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 p-10">
+
+      <div className="container mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 p-10 font-subheading">
         {curtainsdata.map((item) => (
           <BlindsSection
             key={item.id}
@@ -65,22 +66,25 @@ const Curtains_Page = () => {
           />
         ))}
       </div>
-      <BookingBanner
+      <div className=" font-subheading">     <BookingBanner
         title="Book Appointment Today And Get a Free $300 Voucher To Use Towards Your Order!"
         description="Our customer consultants have a wealth of experience and will guide you along the way to creating the home you love. Take the first step and book an appointment with our expert local advisers."
         buttonText="BOOK APPOINTMENT"
         buttonLink="#"
         imageUrl="https://watsonblinds.com.au/wp-content/uploads/2018/05/shutterstock_721093795.jpg"
-      />
+      /></div>
+ 
 
-      <div className="mt-10 mb-10">
+      <div className="mt-10 mb-10 font-subheading ">
         {" "}
         <BrochureRequestForm />
       </div>
 
-      <CurtainsFeature/>
+      <div className="font-subheading" >    <CurtainsFeature/></div>
 
-      <Fearures_part/>
+  
+        <div className=" font-subheading ">      <Fearures_part/></div>
+
 
       <ChooseTransparency
         title={"Choose Your Pleats"}
@@ -93,12 +97,13 @@ const Curtains_Page = () => {
   
       />
 
+<div className=" font-subheading ">
       <Tiebacks/>
 
       <FAQs/>
 
       
-      <ClientReviews reviews={reviewsData}/>
+      <ClientReviews reviews={reviewsData}/></div>
 
 
       

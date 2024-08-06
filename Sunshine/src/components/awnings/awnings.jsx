@@ -27,15 +27,15 @@ const Awnings_Page = () => {
 <div className="bg-white">
         <div className="container mx-auto py-3">
           {/* Main text centered at the top */}
-          <div className="flex flex-col items-center text-center mb-16">
-            <h1 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
+          <div className="flex flex-col items-center text-center mb-16 font-subheading">
+            <h1 className="text-3xl md:text-3xl font-bold text-blue-800 mb-4">
             Add Value To Your Home & Lifestyle With Our Retractable Awnings
             </h1>
             <p className="text-gray-700 mb-8">
             Control The Weather & Enjoy Year Round Comfort? It's A No-Brainer.
             </p>
           </div>
-          <div className="-mt-32">
+          <div className="-mt-32 font-subheading">
             <FrontPage 
               imageUrl="https://watsonblinds.com.au/wp-content/uploads/2024/02/new-ad-for-site.2jpg.jpg"
               title="You Always Get More With Watson Retractable Awnings"
@@ -47,7 +47,7 @@ const Awnings_Page = () => {
           </div>
         </div>
       </div>
-
+<div className=' font-subheading '>
       <FeatureSection features={features}/>
 
       <OutdoorBlindsAwningsPage/>
@@ -74,6 +74,7 @@ const Awnings_Page = () => {
       />
 
       <OutdoorSpacesComponent/>
+      </div>
 
       <ChooseTransparency
         title={"Choose Your Transparency"}
@@ -105,11 +106,16 @@ const Awnings_Page = () => {
       />
       </div>
 
+      <div className=' font-subheading ' >
       <FabricPart/>
 
       <FAQs/>
 
       <ClientReviews reviews={reviewsData}/>
+      </div>
+
+
+    
 
 </>
   )

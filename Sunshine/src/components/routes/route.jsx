@@ -6,6 +6,7 @@ import Curtains_Page from "../curtains/curtains";
 import Shutter from "../shutters/shutter";
 import Awnings_Page from "../awnings/awnings";
 import Commercial_Page from "../commercial/commercial";
+import ContactUs from "../contactus/contactus";
 
 const AppRoutes = () => (
   <Routes>
@@ -15,6 +16,7 @@ const AppRoutes = () => (
     <Route path="/shutters" element={<Shutter/>}></Route>
     <Route path="/awnings" element={<Awnings_Page/>}></Route>
     <Route path="/commercial" element={<Commercial_Page/>}></Route>
+    <Route path="/contact" element={<ContactUs/>}></Route>
     
     
     
