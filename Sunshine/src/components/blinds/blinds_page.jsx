@@ -14,7 +14,7 @@ import ChooseTransparency from "./transperency";
 import FAQs from "../faq/faq";
 import ClientReviews from "../reviews/reviews";
 import reviewsData from "../reviews/reviews_data";
-import { useGetblindsQuery } from "../redux/api";
+import { useGetblindproductsQuery, useGetblindsQuery } from "../redux/api";
 import LoadingPage from "../loading_page/loadingpage";
 
 const Blinds_page = () => {
@@ -29,19 +29,26 @@ const Blinds_page = () => {
   ];
 
   const [blinds, setBlinds] = useState([]);
-  const { data, error, isLoading } = useGetblindsQuery();
+  const [blindsproduct, setBlindsproduct] = useState([]);
+  const { data: blindsData, error: blindsError, isLoading: blindsLoading } = useGetblindsQuery();
+  const { data: blindsproductData, error: blindsproductError, isLoading: blindsproductLoading } = useGetblindproductsQuery();
 
 
 
 
 
   useEffect(() => {
-    if (data) {
-      setBlinds(data.data);
+    if (blindsData) {
+      setBlinds(blindsData.data);
     }
-  }, [data]);
+    if(blindsproductData){
+      setBlindsproduct(blindsproductData.data)
+    }
+  }, [blindsData,blindsproductData]);
 
-  console.log(data)
+  console.log(blindData)
+  const isLoading = blindsLoading || blindsproductLoading;
+  const error = blindsError || blindsproductError;
 
 
 
@@ -91,14 +98,14 @@ const Blinds_page = () => {
         <FeatureSection features={features} />
       </div>
 
-      <div className="container mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-0  md:p-10 font-subheading">
-        {blindData.map((item) => (
+      <div className="container mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-0  md:p-10 font-subheading cursor-pointer ">
+        {blindsproduct.map((item) => (
           <BlindsSection
             key={item.id}
-            title={item.title}
-            description={item.description}
-            imageUrl={item.imageUrl}
-            buttonText={item.buttonText}
+            title={item.attributes.title}
+            description={item.attributes.des}
+            imageUrl={`${process.env.STRAPI_API}${item.attributes.img.data.attributes.url}`}
+            buttonText={item.attributes.buttontext}
             buttonLink={item.buttonLink}
           />
         ))}

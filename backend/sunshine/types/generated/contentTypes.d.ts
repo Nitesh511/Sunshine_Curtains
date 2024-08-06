@@ -362,78 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiBlindBlind extends Schema.CollectionType {
-  collectionName: 'blinds';
-  info: {
-    singularName: 'blind';
-    pluralName: 'blinds';
-    displayName: 'blind';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title1: Attribute.String;
-    title2: Attribute.String;
-    img: Attribute.Media<'images'>;
-    imgtext1: Attribute.String;
-    imgtext2: Attribute.String;
-    buttontext: Attribute.String;
-    slug: Attribute.UID<'api::blind.blind', 'title1'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::blind.blind',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::blind.blind',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiBlindproductBlindproduct extends Schema.CollectionType {
-  collectionName: 'blindproducts';
-  info: {
-    singularName: 'blindproduct';
-    pluralName: 'blindproducts';
-    displayName: 'Blindproduct';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    des: Attribute.RichText;
-    img: Attribute.Media<'images' | 'videos' | 'audios' | 'files'>;
-    buttontext: Attribute.String;
-    slug: Attribute.UID<'api::blindproduct.blindproduct', 'title'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::blindproduct.blindproduct',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::blindproduct.blindproduct',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -860,6 +788,112 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiBlindBlind extends Schema.CollectionType {
+  collectionName: 'blinds';
+  info: {
+    singularName: 'blind';
+    pluralName: 'blinds';
+    displayName: 'blind';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title1: Attribute.String;
+    title2: Attribute.String;
+    img: Attribute.Media<'images'>;
+    imgtext1: Attribute.String;
+    imgtext2: Attribute.String;
+    buttontext: Attribute.String;
+    slug: Attribute.UID<'api::blind.blind', 'title1'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blind.blind',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blind.blind',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiBlindproductBlindproduct extends Schema.CollectionType {
+  collectionName: 'blindproducts';
+  info: {
+    singularName: 'blindproduct';
+    pluralName: 'blindproducts';
+    displayName: 'Blindproduct';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    des: Attribute.RichText;
+    img: Attribute.Media<'images' | 'videos' | 'audios' | 'files'>;
+    buttontext: Attribute.String;
+    slug: Attribute.UID<'api::blindproduct.blindproduct', 'title'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blindproduct.blindproduct',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blindproduct.blindproduct',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiReviewReview extends Schema.CollectionType {
+  collectionName: 'reviews';
+  info: {
+    singularName: 'review';
+    pluralName: 'reviews';
+    displayName: 'review';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    type: Attribute.String;
+    rating: Attribute.Float;
+    review: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::review.review',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::review.review',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -870,8 +904,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::blind.blind': ApiBlindBlind;
-      'api::blindproduct.blindproduct': ApiBlindproductBlindproduct;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -880,6 +912,9 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::blind.blind': ApiBlindBlind;
+      'api::blindproduct.blindproduct': ApiBlindproductBlindproduct;
+      'api::review.review': ApiReviewReview;
     }
   }
 }

@@ -5,10 +5,10 @@ const AboutUs = () => {
   return (
     <div className="py-8">
       <div className="container mx-auto px-4 md:px-16">
-        <div className="flex flex-col-reverse md:flex-row gap-8 items-center">
+        <div className="flex flex-col-reverse md:flex-row gap-8 items-center  font-subheading ">
           {/* Text on top for mobile, left side for larger screens */}
           <div className="flex-1 text-center md:text-left">
-            <h1 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4 mt-0 md:-mt-32">
+            <h1 className="text-3xl md:text-3xl font-bold text-blue-800 mb-4 mt-0 md:-mt-32">
               About Us
             </h1>
             <p className="text-gray-700 mb-8 leading-relaxed">

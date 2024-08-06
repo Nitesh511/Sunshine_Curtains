@@ -15,15 +15,15 @@ const Dashboard = () => {
       <div className="bg-white">
         <div className="container mx-auto py-3">
           {/* Main text centered at the top */}
-          <div className="flex flex-col items-center text-center mb-16">
-            <h1 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
+          <div className="flex flex-col items-center text-center mb-16 font-subheading ">
+            <h1 className="text-3xl md:text-3xl font-bold text-blue-800 mb-4">
               Uncover Motorised Blinds. For Smarter, Smoother Shade.
             </h1>
             <p className="text-gray-700 mb-8">
               Set the mood with the touch of a button.
             </p>
           </div>
-          <div className="-mt-32">
+          <div className="-mt-32 font-subheading">
             <FrontPage
               imageUrl={powerimg}
               title="At Sunshine You Always Get More"
@@ -38,7 +38,7 @@ const Dashboard = () => {
       <div className="-mt-16 lg:mt-0"></div>
       <Banner />
 
-      <div className="container mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-0 md:p-10">
+      <div className="container mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-0 md:p-10 font-subheading">
         <BlindsSection
           title="Blinds"
           description="At Watson we truly wear our hearts on our windows and never compromise on quality. Our blinds are always custom measured and fitted for you and we provide the region's widest range."
