@@ -7,11 +7,13 @@ import Shutter from "../shutters/shutter";
 import Awnings_Page from "../awnings/awnings";
 import Commercial_Page from "../commercial/commercial";
 import ContactUs from "../contactus/contactus";
+import Productdetails from "../productdetails/productdetails";
 
 const AppRoutes = () => (
   <Routes>
     <Route path="/" element={<Dashboard />} />
     <Route path="/blinds" element={<Blinds_page/>}></Route>
+    <Route path="/blinds/:slug" element={<Productdetails/>}></Route>
     <Route path="/curtains" element={<Curtains_Page/>}></Route>
     <Route path="/shutters" element={<Shutter/>}></Route>
     <Route path="/awnings" element={<Awnings_Page/>}></Route>

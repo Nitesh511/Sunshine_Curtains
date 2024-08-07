@@ -1,8 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import faqItems from './gaq_questions';
+import { useGetfaqQuery } from '../redux/api';
+import LoadingPage from '../loading_page/loadingpage';
 
 const FAQs = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [faq, setFaq]= useState([]);
+
+  const{data,isLoading,error}= useGetfaqQuery();
+
+  useEffect(()=>{
+    if(data){
+      setFaq(data.data)
+    }
+  })
+
+  if(isLoading){
+    return <LoadingPage/>
+  }
+
+  if (error) {
+    return <div>Error Loading Data: {error.message}</div>;
+  }
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -15,7 +34,7 @@ const FAQs = () => {
       <h2 className="text-2xl font-bold mb-4 text-center">FAQs 🙋‍♀️</h2>
       <p className="text-gray-600 mb-6 text-center">Frequently Asked Questions</p>
       <div className="space-y-4">
-        {faqItems.map((item, index) => (
+        {faq.map((item, index) => (
           <div key={index}>
             <button
               className={`flex justify-between items-center w-full text-left ${
@@ -25,7 +44,7 @@ const FAQs = () => {
               } px-4 py-3 rounded-lg`}
               onClick={() => toggleAccordion(index)}
             >
-              <span>{item.question}</span>
+              <span>{item.attributes.question}</span>
               <svg
                 className={`h-6 w-6 transition-transform ${
                   activeIndex === index ? 'transform rotate-180' : ''
@@ -44,7 +63,7 @@ const FAQs = () => {
             </button>
             {activeIndex === index && (
               <div className="bg-gray-100 p-4 rounded-b-lg">
-                <p className="text-gray-700">{item.answer}</p>
+                <p className="text-gray-700">{item.attributes.answer}</p>
               </div>
             )}
           </div>

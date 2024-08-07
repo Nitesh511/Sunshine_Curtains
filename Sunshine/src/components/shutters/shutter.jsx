@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FrontPage from "../resuable_components/front_page";
 import FeatureSection from "../resuable_components/features_section";
 import { GiKangaroo } from "react-icons/gi";
@@ -15,8 +15,28 @@ import ChooseTransparency from "../blinds/transperency";
 import FAQs from "../faq/faq";
 import ClientReviews from "../reviews/reviews";
 import reviewsData from "../reviews/reviews_data";
+import { useGetshuttersQuery } from "../redux/api";
+import LoadingPage from "../loading_page/loadingpage";
 
 const Shutter = () => {
+  const[shutter, setShutter]= useState([]);
+
+  const{data,isLoading,error}= useGetshuttersQuery();
+
+  useEffect(()=>{
+    if(data){
+      setShutter(data.data)
+    }
+  },[data]);
+
+  if(isLoading){
+    return <LoadingPage/>
+
+  }
+
+  if(error){
+    return <div> Error Loading Data:{error.message}</div>
+  }
   const features = [
     { icon: <GiKangaroo />, title: "Custom Made In Australia" },
     { icon: <IoColorPaletteSharp />, title: "Custom Colour Service" },
@@ -28,23 +48,29 @@ const Shutter = () => {
       <div className="bg-white">
         <div className="container mx-auto py-3">
           {/* Main text centered at the top */}
-          <div className="flex flex-col items-center text-center mb-16 font-subheading">
+          {shutter.map((items)=>(
+            <React.Fragment key={items.id}>
+            <div className="flex flex-col items-center text-center mb-16 font-subheading">
             <h1 className="text-3xl md:text-3xl font-bold text-blue-800 mb-4">
-              Add Value To Your Home With Custom-Made Window Shutters
+            {items.attributes.title1}
             </h1>
             <p className="text-gray-700 mb-8">
-              And Enjoy 20 Year Warranties & Timeless Style That Will Never Age
+            {items.attributes.title2}
             </p>
           </div>
           <div className="-mt-32 font-subheading">
-            <FrontPage
-              imageUrl="https://watsonblinds.com.au/wp-content/uploads/2015/01/header-img.jpg"
-              title="Add even more value to your home."
-              description="Pull them down for full privacy, or roll them up to enjoy the sunshine."
-              buttonText="BOOK HERE & GET $300 FREE"
-              buttonLink="#"
-            />
+          <FrontPage
+            imageUrl={`${process.env.STRAPI_API}${items.attributes.img.data.attributes.url}`}
+            title={items.attributes.imgtext1}
+            description={items.attributes.imgtext2}
+            buttonText={items.attributes.buttontext}
+            buttonLink="#"
+          />
           </div>
+
+            </React.Fragment>
+          ))}
+
         </div>
       </div>
 

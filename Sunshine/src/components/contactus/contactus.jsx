@@ -14,15 +14,15 @@ const ContactUs = () => {
           <div className="mb-4">
             <div className="flex items-center mb-2">
               <FaMapMarkerAlt className="text-xl mr-2" />
-              <span>123 Sunshine Street, Sunnytown, ST 12345</span>
+              <span>Canberra,ACT</span>
             </div>
             <div className="flex items-center mb-2">
               <FaPhone className="text-xl mr-2" />
-              <span>(123) 456-7890</span>
+              <span>0435 595 003</span>
             </div>
             <div className="flex items-center">
               <FaEnvelope className="text-xl mr-2" />
-              <span>info@sunshinecurtains.com</span>
+              <span>admin@sunshineblindscanberra.com</span>
             </div>
           </div>
           

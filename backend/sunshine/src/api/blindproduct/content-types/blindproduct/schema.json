@@ -19,14 +19,15 @@
       "type": "richtext"
     },
     "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "videos",
         "audios",
         "files"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "buttontext": {
       "type": "string"
@@ -34,6 +35,11 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "productdetails": {
+      "type": "component",
+      "repeatable": false,
+      "component": "products.products"
     }
   }
 }

@@ -30,27 +30,29 @@ const Blinds_page = () => {
 
   const [blinds, setBlinds] = useState([]);
   const [blindsproduct, setBlindsproduct] = useState([]);
-  const { data: blindsData, error: blindsError, isLoading: blindsLoading } = useGetblindsQuery();
-  const { data: blindsproductData, error: blindsproductError, isLoading: blindsproductLoading } = useGetblindproductsQuery();
-
-
-
-
+  const {
+    data: blindsData,
+    error: blindsError,
+    isLoading: blindsLoading,
+  } = useGetblindsQuery();
+  const {
+    data: blindsproductData,
+    error: blindsproductError,
+    isLoading: blindsproductLoading,
+  } = useGetblindproductsQuery();
 
   useEffect(() => {
     if (blindsData) {
       setBlinds(blindsData.data);
     }
-    if(blindsproductData){
-      setBlindsproduct(blindsproductData.data)
+    if (blindsproductData) {
+      setBlindsproduct(blindsproductData.data);
     }
-  }, [blindsData,blindsproductData]);
+  }, [blindsData, blindsproductData]);
 
-  console.log(blindData)
+  console.log(blindData);
   const isLoading = blindsLoading || blindsproductLoading;
   const error = blindsError || blindsproductError;
-
-
 
   if (isLoading) {
     return <LoadingPage />;
@@ -66,32 +68,28 @@ const Blinds_page = () => {
           {blinds.map((items, index) => (
             <div key={index} className="mb-16">
               {/* Main text centered at the top */}
-             
+
               <div className="flex flex-col items-center text-center mb-16 font-subheading text-3xl">
                 <h1 className="font-bold text-blue-800 mb-4">
-                 {items.attributes.title1}
+                  {items.attributes.title1}
                 </h1>
                 <p className="text-gray-700 mb-8 font-subheading text-lg">
-                {items.attributes.title2}
+                  {items.attributes.title2}
                 </p>
               </div>
               <div className="-mt-32 font-subheading text-base">
                 <FrontPage
                   imageUrl={`${process.env.STRAPI_API}${items.attributes.img.data.attributes.url}`}
-                  
                   title={items.attributes.imgtext1}
                   description={items.attributes.imgtext2}
                   buttonText={items.attributes.buttontext}
                   buttonLink="#"
                 />
-            
               </div>
             </div>
           ))}
-          
         </div>
       </div>
-      
 
       <div className=" font-subheading ">
         {" "}
@@ -106,7 +104,7 @@ const Blinds_page = () => {
             description={item.attributes.des}
             imageUrl={`${process.env.STRAPI_API}${item.attributes.img.data.attributes.url}`}
             buttonText={item.attributes.buttontext}
-            buttonLink={item.buttonLink}
+            buttonLink={`/blinds/${item.attributes.slug}`}
           />
         ))}
       </div>
@@ -155,7 +153,7 @@ const Blinds_page = () => {
 
       <div className=" font-subheading text-base ">
         {" "}
-        <ClientReviews reviews={reviewsData} />
+        <ClientReviews />
       </div>
     </>
   );

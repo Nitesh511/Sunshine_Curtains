@@ -788,6 +788,108 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutAbout extends Schema.CollectionType {
+  collectionName: 'abouts';
+  info: {
+    singularName: 'about';
+    pluralName: 'abouts';
+    displayName: 'about';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    des: Attribute.RichText;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about.about',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about.about',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAwningAwning extends Schema.CollectionType {
+  collectionName: 'awnings';
+  info: {
+    singularName: 'awning';
+    pluralName: 'awnings';
+    displayName: 'awning';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title1: Attribute.String;
+    title2: Attribute.String;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    imgtext1: Attribute.String;
+    imgtext2: Attribute.String;
+    buttontext: Attribute.String;
+    slug: Attribute.UID<'api::awning.awning', 'title1'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::awning.awning',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::awning.awning',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAwningproductAwningproduct extends Schema.CollectionType {
+  collectionName: 'awningproducts';
+  info: {
+    singularName: 'awningproduct';
+    pluralName: 'awningproducts';
+    displayName: 'Awningproduct';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    des: Attribute.RichText;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    buttontext: Attribute.String;
+    slug: Attribute.UID<'api::awningproduct.awningproduct', 'title'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::awningproduct.awningproduct',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::awningproduct.awningproduct',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBlindBlind extends Schema.CollectionType {
   collectionName: 'blinds';
   info: {
@@ -842,6 +944,7 @@ export interface ApiBlindproductBlindproduct extends Schema.CollectionType {
     img: Attribute.Media<'images' | 'videos' | 'audios' | 'files'>;
     buttontext: Attribute.String;
     slug: Attribute.UID<'api::blindproduct.blindproduct', 'title'>;
+    productdetails: Attribute.Component<'products.products'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -856,6 +959,169 @@ export interface ApiBlindproductBlindproduct extends Schema.CollectionType {
       'oneToOne',
       'admin::user'
     > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCurtainCurtain extends Schema.CollectionType {
+  collectionName: 'curtains';
+  info: {
+    singularName: 'curtain';
+    pluralName: 'curtains';
+    displayName: 'curtain';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title1: Attribute.String;
+    title2: Attribute.String;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    imgtext1: Attribute.String;
+    imgtext2: Attribute.String;
+    buttontext: Attribute.String;
+    slug: Attribute.UID<'api::curtain.curtain', 'title1'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::curtain.curtain',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::curtain.curtain',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCurtainproductCurtainproduct extends Schema.CollectionType {
+  collectionName: 'curtainproducts';
+  info: {
+    singularName: 'curtainproduct';
+    pluralName: 'curtainproducts';
+    displayName: 'curtainproduct';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    des: Attribute.RichText;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    buttontext: Attribute.String;
+    slug: Attribute.UID<'api::curtainproduct.curtainproduct', 'title'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::curtainproduct.curtainproduct',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::curtainproduct.curtainproduct',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiDashboardDashboard extends Schema.CollectionType {
+  collectionName: 'dashboards';
+  info: {
+    singularName: 'dashboard';
+    pluralName: 'dashboards';
+    displayName: 'dashboard';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title1: Attribute.String;
+    title2: Attribute.String;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    imgtext1: Attribute.String;
+    imgtext2: Attribute.String;
+    buttontext: Attribute.String;
+    slug: Attribute.UID<'api::dashboard.dashboard', 'title1'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::dashboard.dashboard',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::dashboard.dashboard',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiDashboardproductDashboardproduct
+  extends Schema.CollectionType {
+  collectionName: 'dashboardproducts';
+  info: {
+    singularName: 'dashboardproduct';
+    pluralName: 'dashboardproducts';
+    displayName: 'dashboardproduct';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    buttontext: Attribute.String;
+    des: Attribute.RichText;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::dashboardproduct.dashboardproduct',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::dashboardproduct.dashboardproduct',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFaqFaq extends Schema.CollectionType {
+  collectionName: 'faqs';
+  info: {
+    singularName: 'faq';
+    pluralName: 'faqs';
+    displayName: 'faq';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    question: Attribute.RichText;
+    answer: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::faq.faq', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::faq.faq', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -894,6 +1160,76 @@ export interface ApiReviewReview extends Schema.CollectionType {
   };
 }
 
+export interface ApiShutterShutter extends Schema.CollectionType {
+  collectionName: 'shutters';
+  info: {
+    singularName: 'shutter';
+    pluralName: 'shutters';
+    displayName: 'shutter';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title1: Attribute.String;
+    title2: Attribute.String;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    imgtext1: Attribute.String;
+    imgtext2: Attribute.String;
+    buttontext: Attribute.String;
+    slug: Attribute.UID<'api::shutter.shutter', 'title1'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::shutter.shutter',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::shutter.shutter',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiShutterproductShutterproduct extends Schema.CollectionType {
+  collectionName: 'shutterproducts';
+  info: {
+    singularName: 'shutterproduct';
+    pluralName: 'shutterproducts';
+    displayName: 'Shutterproduct';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    des: Attribute.RichText;
+    img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    buttontext: Attribute.String;
+    slug: Attribute.UID<'api::shutterproduct.shutterproduct', 'title'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::shutterproduct.shutterproduct',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::shutterproduct.shutterproduct',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -912,9 +1248,19 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::about.about': ApiAboutAbout;
+      'api::awning.awning': ApiAwningAwning;
+      'api::awningproduct.awningproduct': ApiAwningproductAwningproduct;
       'api::blind.blind': ApiBlindBlind;
       'api::blindproduct.blindproduct': ApiBlindproductBlindproduct;
+      'api::curtain.curtain': ApiCurtainCurtain;
+      'api::curtainproduct.curtainproduct': ApiCurtainproductCurtainproduct;
+      'api::dashboard.dashboard': ApiDashboardDashboard;
+      'api::dashboardproduct.dashboardproduct': ApiDashboardproductDashboardproduct;
+      'api::faq.faq': ApiFaqFaq;
       'api::review.review': ApiReviewReview;
+      'api::shutter.shutter': ApiShutterShutter;
+      'api::shutterproduct.shutterproduct': ApiShutterproductShutterproduct;
     }
   }
 }

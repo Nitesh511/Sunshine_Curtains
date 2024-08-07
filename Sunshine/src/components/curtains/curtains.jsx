@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FrontPage from "../resuable_components/front_page";
 import FeatureSection from "../resuable_components/features_section";
 import { GiKangaroo } from "react-icons/gi";
@@ -15,8 +15,26 @@ import ChooseTransparency from "../blinds/transperency";
 import FAQs from "../faq/faq";
 import ClientReviews from "../reviews/reviews";
 import reviewsData from "../reviews/reviews_data";
+import { useGetcurtainsQuery } from "../redux/api";
+import LoadingPage from "../loading_page/loadingpage";
 
 const Curtains_Page = () => {
+  const [curtain, setCurtain] = useState([]);
+  const { data, isLoading, error } = useGetcurtainsQuery();
+
+  useEffect(() => {
+    if (data) {
+      setCurtain(data.data);
+    }
+  });
+
+  if (isLoading) {
+    return <LoadingPage />;
+  }
+
+  if (error) {
+    return <div>Error Loadind Data:{error.message}</div>;
+  }
   const features = [
     { icon: <GiKangaroo />, title: "Custom Made In Australia" },
     {
@@ -28,31 +46,35 @@ const Curtains_Page = () => {
   ];
   return (
     <>
-      <div className="bg-white">
-        <div className="container mx-auto py-3">
-          {/* Main text centered at the top */}
-          <div className="flex flex-col items-center text-center mb-16 font-subheading">
-            <h1 className="text-3xl md:text-3xl font-bold text-blue-800 mb-4">
-              Explore The Widest Range Of Custom-Made Curtains in Australia
-            </h1>
-            <p className="text-gray-700 mb-8">
-              Sophistication & Practicality. The Easiest Decision You'll Ever
-              Make.
-            </p>
-          </div>
-          <div className="-mt-32 font-subheading">
-            <FrontPage
-              imageUrl="https://watsonblinds.com.au/wp-content/uploads/2018/05/curtains-01.jpg"
-              title="Sheer Elegance"
-              description="For luxury without the hefty price tag, browse our range of Sheer Curtains. Go on,you know you want to!"
-              buttonText="BOOK HERE & GET $300 FREE"
-              buttonLink="#"
-            />
-          </div>
+   <div className="bg-white">
+  <div className="container mx-auto py-3">
+    {/* Main text centered at the top */}
+    {curtain.map((items) => (
+      <React.Fragment key={items.id}>
+        <div className="flex flex-col items-center text-center mb-16 font-subheading">
+          <h1 className="text-3xl md:text-3xl font-bold text-blue-800 mb-4">
+            {items.attributes.title1}
+          </h1>
+          <p className="text-gray-700 mb-8">{items.attributes.title2}</p>
         </div>
-      </div>
-      <div className="font-subheading">      <FeatureSection features={features} /></div>
+        <div className="-mt-32 font-subheading">
+          <FrontPage
+            imageUrl={`${process.env.STRAPI_API}${items.attributes.img.data.attributes.url}`}
+            title={items.attributes.imgtext1}
+            description={items.attributes.imgtext2}
+            buttonText={items.attributes.buttontext}
+            buttonLink="#"
+          />
+        </div>
+      </React.Fragment>
+    ))}
+  </div>
+</div>
 
+      <div className="font-subheading">
+        {" "}
+        <FeatureSection features={features} />
+      </div>
 
       <div className="container mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 p-10 font-subheading">
         {curtainsdata.map((item) => (
@@ -66,25 +88,31 @@ const Curtains_Page = () => {
           />
         ))}
       </div>
-      <div className=" font-subheading">     <BookingBanner
-        title="Book Appointment Today And Get a Free $300 Voucher To Use Towards Your Order!"
-        description="Our customer consultants have a wealth of experience and will guide you along the way to creating the home you love. Take the first step and book an appointment with our expert local advisers."
-        buttonText="BOOK APPOINTMENT"
-        buttonLink="#"
-        imageUrl="https://watsonblinds.com.au/wp-content/uploads/2018/05/shutterstock_721093795.jpg"
-      /></div>
- 
+      <div className=" font-subheading">
+        {" "}
+        <BookingBanner
+          title="Book Appointment Today And Get a Free $300 Voucher To Use Towards Your Order!"
+          description="Our customer consultants have a wealth of experience and will guide you along the way to creating the home you love. Take the first step and book an appointment with our expert local advisers."
+          buttonText="BOOK APPOINTMENT"
+          buttonLink="#"
+          imageUrl="https://watsonblinds.com.au/wp-content/uploads/2018/05/shutterstock_721093795.jpg"
+        />
+      </div>
 
       <div className="mt-10 mb-10 font-subheading ">
         {" "}
         <BrochureRequestForm />
       </div>
 
-      <div className="font-subheading" >    <CurtainsFeature/></div>
+      <div className="font-subheading">
+        {" "}
+        <CurtainsFeature />
+      </div>
 
-  
-        <div className=" font-subheading ">      <Fearures_part/></div>
-
+      <div className=" font-subheading ">
+        {" "}
+        <Fearures_part />
+      </div>
 
       <ChooseTransparency
         title={"Choose Your Pleats"}
@@ -94,25 +122,15 @@ const Curtains_Page = () => {
         img1={"https://watsonblinds.com.au/wp-content/uploads/2021/08/1c.png"}
         img2={"https://watsonblinds.com.au/wp-content/uploads/2021/08/2c.png"}
         img3={"https://watsonblinds.com.au/wp-content/uploads/2021/08/3c.png"}
-  
       />
 
-<div className=" font-subheading ">
-      <Tiebacks/>
+      <div className=" font-subheading ">
+        <Tiebacks />
 
-      <FAQs/>
+        <FAQs />
 
-      
-      <ClientReviews reviews={reviewsData}/></div>
-
-
-      
-
-      
-
-
-    
-
+        <ClientReviews reviews={reviewsData} />
+      </div>
     </>
   );
 };

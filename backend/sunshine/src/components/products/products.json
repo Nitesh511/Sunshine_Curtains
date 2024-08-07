@@ -1,19 +1,25 @@
 {
   "collectionName": "components_products_products",
   "info": {
-    "displayName": "products",
+    "displayName": "productsdetails",
     "icon": "shoppingCart",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "title": {
+    "title1": {
       "type": "string"
     },
-    "des": {
-      "type": "richtext"
+    "imgtext1": {
+      "type": "string"
+    },
+    "imgtext2": {
+      "type": "string"
     },
     "buttontext": {
+      "type": "string"
+    },
+    "title2": {
       "type": "string"
     }
   }
