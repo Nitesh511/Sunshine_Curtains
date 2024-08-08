@@ -862,6 +862,7 @@ export interface ApiAwningproductAwningproduct extends Schema.CollectionType {
     singularName: 'awningproduct';
     pluralName: 'awningproducts';
     displayName: 'Awningproduct';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -872,6 +873,9 @@ export interface ApiAwningproductAwningproduct extends Schema.CollectionType {
     img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     buttontext: Attribute.String;
     slug: Attribute.UID<'api::awningproduct.awningproduct', 'title'>;
+    productdetails: Attribute.Component<'products.products'>;
+    img1: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    img2: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -945,6 +949,8 @@ export interface ApiBlindproductBlindproduct extends Schema.CollectionType {
     buttontext: Attribute.String;
     slug: Attribute.UID<'api::blindproduct.blindproduct', 'title'>;
     productdetails: Attribute.Component<'products.products'>;
+    img1: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    img2: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -969,6 +975,7 @@ export interface ApiCurtainCurtain extends Schema.CollectionType {
     singularName: 'curtain';
     pluralName: 'curtains';
     displayName: 'curtain';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1005,6 +1012,7 @@ export interface ApiCurtainproductCurtainproduct extends Schema.CollectionType {
     singularName: 'curtainproduct';
     pluralName: 'curtainproducts';
     displayName: 'curtainproduct';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1015,6 +1023,9 @@ export interface ApiCurtainproductCurtainproduct extends Schema.CollectionType {
     img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     buttontext: Attribute.String;
     slug: Attribute.UID<'api::curtainproduct.curtainproduct', 'title'>;
+    productdetails: Attribute.Component<'products.products'>;
+    img1: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    img2: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1202,6 +1213,7 @@ export interface ApiShutterproductShutterproduct extends Schema.CollectionType {
     singularName: 'shutterproduct';
     pluralName: 'shutterproducts';
     displayName: 'Shutterproduct';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1212,6 +1224,9 @@ export interface ApiShutterproductShutterproduct extends Schema.CollectionType {
     img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     buttontext: Attribute.String;
     slug: Attribute.UID<'api::shutterproduct.shutterproduct', 'title'>;
+    productdetails: Attribute.Component<'products.products'>;
+    img1: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    img2: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

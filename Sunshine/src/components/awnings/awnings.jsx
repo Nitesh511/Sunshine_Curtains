@@ -102,7 +102,7 @@ const Awnings_Page = () => {
               description={item.attributes.des}
               imageUrl={`${process.env.STRAPI_API}${item.attributes.img.data.attributes.url}`}
               buttonText={item.attributes.buttontext}
-              buttonLink={item.buttonLink}
+              buttonLink={`/awnings/${item.attributes.slug}`}
             />
           ))}
         </div>
@@ -114,7 +114,7 @@ const Awnings_Page = () => {
           buttonLink="#"
           imageUrl="https://watsonblinds.com.au/wp-content/uploads/2018/05/shutterstock_721093795.jpg"
         />
-
+  
         <OutdoorSpacesComponent />
       </div>
 

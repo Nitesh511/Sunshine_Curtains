@@ -21,6 +21,21 @@
     },
     "title2": {
       "type": "string"
+    },
+    "title3": {
+      "type": "string"
+    },
+    "des": {
+      "type": "richtext"
+    },
+    "title4": {
+      "type": "string"
+    },
+    "des2": {
+      "type": "richtext"
+    },
+    "title5": {
+      "type": "string"
     }
   }
 }

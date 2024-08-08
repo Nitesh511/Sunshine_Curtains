@@ -15,8 +15,11 @@ const AppRoutes = () => (
     <Route path="/blinds" element={<Blinds_page/>}></Route>
     <Route path="/blinds/:slug" element={<Productdetails/>}></Route>
     <Route path="/curtains" element={<Curtains_Page/>}></Route>
+    <Route path="/curtains/:slug" element={<Productdetails/>}></Route>
     <Route path="/shutters" element={<Shutter/>}></Route>
+    <Route path="/shutters/:slug" element={<Productdetails/>}></Route>
     <Route path="/awnings" element={<Awnings_Page/>}></Route>
+    <Route path="/awnings/:slug" element={<Productdetails/>}></Route>
     <Route path="/commercial" element={<Commercial_Page/>}></Route>
     <Route path="/contact" element={<ContactUs/>}></Route>
     

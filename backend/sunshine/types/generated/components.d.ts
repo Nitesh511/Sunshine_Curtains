@@ -13,6 +13,11 @@ export interface ProductsProducts extends Schema.Component {
     imgtext2: Attribute.String;
     buttontext: Attribute.String;
     title2: Attribute.String;
+    title3: Attribute.String;
+    des: Attribute.RichText;
+    title4: Attribute.String;
+    des2: Attribute.RichText;
+    title5: Attribute.String;
   };
 }
 

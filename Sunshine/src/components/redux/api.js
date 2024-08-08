@@ -28,10 +28,16 @@ const Apidata = createApi({
       query: () => "/api/faqs?populate=*",
     }),
     getcurtains: builder.query({
+      query: () => "/api/curtainproducts?populate=*",
+    }),
+    getcurtainsproduct: builder.query({
       query: () => "/api/curtains?populate=*",
     }),
     getshutters: builder.query({
       query: () => "/api/shutters?populate=*",
+    }),
+    getproductshutter: builder.query({
+      query: () => "/api/shutterproducts?populate=*",
     }),
     getawnings: builder.query({
       query: () => "/api/awnings?populate=*",
@@ -39,12 +45,28 @@ const Apidata = createApi({
     getawningproducts: builder.query({
       query: () => "/api/awningproducts?populate=*",
     }),
-  
+    /* ╔════════════════════════════════════════════════════════╗
+            passing the slug in query to update                 ║
+      ╚════════════════════════════════════════════════════════╝ */
+
     getblindproductdetails: builder.query({
-    
-      query: (slug) => "/api/blindproducts?filters[slug][$eq]=motorised-blinds&populate=*",
-    })
-     
+      query: (slug) =>
+        `/api/blindproducts?filters[slug][$eq]=${slug}&populate=*`,
+    }),
+
+    getcurtainproductdetails: builder.query({
+      query: (slug) =>
+        `/api/curtainproducts?filters[slug][$eq]=${slug}&populate=*`,
+    }),
+
+    getshutterproductdetails: builder.query({
+      query: (slug) =>
+        `/api/shutterproducts?filters[slug][$eq]=${slug}&populate=*`,
+    }),
+    getawningsproductdetails: builder.query({
+      query: (slug) =>
+        `/api/awningproducts?filters[slug][$eq]=${slug}&populate=*`,
+    }),
   }),
 });
 
@@ -58,9 +80,14 @@ export const {
   useGetaboutQuery,
   useGetdashboardproductsQuery,
   useGetfaqQuery,
-  useGetcurtainsQuery,
   useGetshuttersQuery,
   useGetawningsQuery,
   useGetawningproductsQuery,
-  useGetblindproductdetailsQuery
+  useGetblindproductdetailsQuery,
+  useGetcurtainproductdetailsQuery,
+  useGetcurtainsproductQuery,
+  useGetcurtainsQuery,
+  useGetshutterproductdetailsQuery,
+  useGetproductshutterQuery,
+  useGetawningsproductdetailsQuery
 } = Apidata;

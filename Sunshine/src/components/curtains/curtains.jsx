@@ -15,18 +15,28 @@ import ChooseTransparency from "../blinds/transperency";
 import FAQs from "../faq/faq";
 import ClientReviews from "../reviews/reviews";
 import reviewsData from "../reviews/reviews_data";
-import { useGetcurtainsQuery } from "../redux/api";
+import { useGetcurtainsproductQuery, useGetcurtainsQuery } from "../redux/api";
 import LoadingPage from "../loading_page/loadingpage";
 
 const Curtains_Page = () => {
   const [curtain, setCurtain] = useState([]);
-  const { data, isLoading, error } = useGetcurtainsQuery();
+  const[curtaindata, setCurtainData]=useState([]);
+
+  const { data:ni, isLoading:te, error:sh } = useGetcurtainsproductQuery();
+  const{data:na, isLoading:wa, error:mi}= useGetcurtainsQuery();
+  
 
   useEffect(() => {
-    if (data) {
-      setCurtain(data.data);
+    if (ni) {
+      setCurtain(ni.data);
     }
-  });
+    if (na) {
+      setCurtainData(na.data);
+    }
+  },[ni,na]);
+
+  const isLoading= te || wa;
+  const error =sh || mi;
 
   if (isLoading) {
     return <LoadingPage />;
@@ -57,15 +67,18 @@ const Curtains_Page = () => {
           </h1>
           <p className="text-gray-700 mb-8">{items.attributes.title2}</p>
         </div>
-        <div className="-mt-32 font-subheading">
-          <FrontPage
-            imageUrl={`${process.env.STRAPI_API}${items.attributes.img.data.attributes.url}`}
-            title={items.attributes.imgtext1}
-            description={items.attributes.imgtext2}
-            buttonText={items.attributes.buttontext}
-            buttonLink="#"
-          />
-        </div>
+
+        <div className="-mt-32 font-subheading text-base">
+                <FrontPage
+                  imageUrl={`${process.env.STRAPI_API}${items.attributes.img.data.attributes.url}`}
+                  title={items.attributes.imgtext1}
+                  description={items.attributes.imgtext2}
+                  buttonText={items.attributes.buttontext}
+                  buttonLink="#"
+                />
+              </div>
+
+      
       </React.Fragment>
     ))}
   </div>
@@ -77,14 +90,14 @@ const Curtains_Page = () => {
       </div>
 
       <div className="container mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 p-10 font-subheading">
-        {curtainsdata.map((item) => (
+        {curtaindata.map((item) => (
           <BlindsSection
             key={item.id}
-            title={item.title}
-            description={item.description}
-            imageUrl={item.imageUrl}
-            buttonText={item.buttonText}
-            buttonLink={item.buttonLink}
+            title={item.attributes.title}
+            description={item.attributes.des}
+            imageUrl={`${process.env.STRAPI_API}${item.attributes.img.data.attributes.url}`}
+            buttonText={item.attributes.buttontext}
+            buttonLink={`/curtains/${item.attributes.slug}`}
           />
         ))}
       </div>
