@@ -1,8 +1,11 @@
 import React from 'react';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
+import HelmetData from '../helmet/helmet';
 
 const ContactUs = () => {
   return (
+    <>
+    <HelmetData title={"SUNSHINE | CONTACTUS"}/>  
     <div className="max-w-4xl mx-auto px-4 py-8 font-subheading ">
       <h1 className="text-3xl font-bold text-center mb-6">Contact Us</h1>
       
@@ -12,19 +15,30 @@ const ContactUs = () => {
           <p className="mb-4">We'd love to hear from you! Please fill out the form below or use the contact details to reach us directly.</p>
           
           <div className="mb-4">
-            <div className="flex items-center mb-2">
-              <FaMapMarkerAlt className="text-xl mr-2" />
-              <span>Canberra,ACT</span>
-            </div>
-            <div className="flex items-center mb-2">
-              <FaPhone className="text-xl mr-2" />
-              <span>0435 595 003</span>
-            </div>
-            <div className="flex items-center">
-              <FaEnvelope className="text-xl mr-2" />
-              <span>admin@sunshineblindscanberra.com</span>
-            </div>
-          </div>
+      <div className="flex items-center mb-2">
+        <FaMapMarkerAlt className="text-xl mr-2" />
+        <span>Canberra, ACT</span>
+      </div>
+      <div className="flex items-center mb-2">
+        <a href="tel:0435595003" className="flex items-center text-blue-500 hover:underline">
+          <FaPhone className="text-xl mr-2" />
+          <span>0435 595 003</span>
+        </a>
+      </div>
+      <div className="flex items-center mb-2">
+        <a href="tel:0435595003" className="flex items-center text-blue-500 hover:underline">
+          <FaPhone className="text-xl mr-2" />
+          <span>0452 398 100</span>
+        </a>
+      </div>
+      <div className="flex items-center">
+        <a href="mailto:admin@sunshineblindscanberra.com" className="flex items-center text-blue-500 hover:underline">
+          <FaEnvelope className="text-xl mr-2" />
+          <span>admin@sunshineblindscanberra.com</span>
+        </a>
+      </div>
+    </div>
+
           
           <iframe
             className="w-full h-64 border-0"
@@ -83,6 +97,7 @@ const ContactUs = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

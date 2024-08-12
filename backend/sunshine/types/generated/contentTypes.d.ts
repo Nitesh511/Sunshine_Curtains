@@ -1137,6 +1137,33 @@ export interface ApiFaqFaq extends Schema.CollectionType {
   };
 }
 
+export interface ApiLeedLeed extends Schema.CollectionType {
+  collectionName: 'leeds';
+  info: {
+    singularName: 'leed';
+    pluralName: 'leeds';
+    displayName: 'leed';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    firstname: Attribute.String;
+    lastname: Attribute.String;
+    email: Attribute.Email;
+    showroom: Attribute.String;
+    phone: Attribute.BigInteger;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::leed.leed', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::leed.leed', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiReviewReview extends Schema.CollectionType {
   collectionName: 'reviews';
   info: {
@@ -1152,7 +1179,7 @@ export interface ApiReviewReview extends Schema.CollectionType {
     name: Attribute.String;
     type: Attribute.String;
     rating: Attribute.Float;
-    review: Attribute.String;
+    review: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1273,6 +1300,7 @@ declare module '@strapi/types' {
       'api::dashboard.dashboard': ApiDashboardDashboard;
       'api::dashboardproduct.dashboardproduct': ApiDashboardproductDashboardproduct;
       'api::faq.faq': ApiFaqFaq;
+      'api::leed.leed': ApiLeedLeed;
       'api::review.review': ApiReviewReview;
       'api::shutter.shutter': ApiShutterShutter;
       'api::shutterproduct.shutterproduct': ApiShutterproductShutterproduct;

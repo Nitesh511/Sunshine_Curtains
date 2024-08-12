@@ -9,6 +9,8 @@ import ClientReviews from "../reviews/reviews";
 import reviewsData from "../reviews/reviews_data";
 import { useGetdashboardproductsQuery, useGetdashboardQuery } from "../redux/api";
 import LoadingPage from "../loading_page/loadingpage";
+import HelmetData from "../helmet/helmet";
+
 
 const Dashboard = () => {
   const [dash, setDash] = useState([]);
@@ -57,6 +59,7 @@ const Dashboard = () => {
 
   return (
     <>
+   <HelmetData title={"SUN SHINE BLINDS CANBERRA"}/>
       <div className="bg-white">
         <div className="container mx-auto py-3">
           {/* Main text centered at the top */}
@@ -64,10 +67,10 @@ const Dashboard = () => {
             dash.map((items, index) => (
               <div key={index}>
                 <div className="flex flex-col items-center text-center mb-16 font-subheading">
-                  <h1 className="text-3xl md:text-3xl font-bold text-blue-800 mb-4">
+                  <h1 className="text-3xl md:text-3xl font-bold text-customColorRgb mb-4">
                     {items.attributes.title1}
                   </h1>
-                  <p className="text-gray-700 mb-8">
+                  <p className=" text-customColorRgb mb-8 font-subheading text-lg">
                     {items.attributes.title2}
                   </p>
                 </div>
@@ -92,31 +95,38 @@ const Dashboard = () => {
       <div className="-mt-16 lg:mt-0"></div>
       <Banner />
 
-      <div className="container mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-0 md:p-10 font-subheading">
-        {dashproduct.map((items, index) => (
-          <React.Fragment key={index}>
-            <BlindsSection
-              title={items.attributes.title}
-              description={items.attributes.des}
-              imageUrl={`${process.env.STRAPI_API}${items.attributes.img.data.attributes.url}`}
-              buttonText={items.attributes.buttontext}
-              buttonLink={getLinkBasedOnTitle(items.attributes.title)}
-            />
-          </React.Fragment>
-        ))}
+      <div className="container mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-0 md:p-10 -mt-10 md:-mt-20 font-subheading">
+        {dashproduct.map((items, index) => {
+          const link = getLinkBasedOnTitle(items.attributes.title);
+          return (
+            <a
+              key={index}
+              href={link}
+              className="block relative cursor-pointer"
+            >
+              <BlindsSection
+                title={items.attributes.title}
+                description={items.attributes.des}
+                imageUrl={`${process.env.STRAPI_API}${items.attributes.img.data.attributes.url}`}
+                buttonText={items.attributes.buttontext}
+                buttonLink={link}
+              />
+            </a>
+          );
+        })}
       </div>
 
       <BookingBanner
-        title="Book Appointment Today And Get a Free $300 Voucher To Use Towards Your Order!"
-        description="Our customer consultants have a wealth of experience and will guide you along the way to creating the home you love. Take the first step and book an appointment with our expert local advisers."
-        buttonText="BOOK APPOINTMENT"
+        title="Book Your Appointment Today and Receive a Free $200 Voucher!"
+        description="Our skilled customer consultants are here to assist you in creating the home you’ve always wanted. Book an appointment with our local experts and start your journey to a beautifully transformed space."
+        buttonText="BOOK NOW"
         buttonLink="#"
-        imageUrl="https://watsonblinds.com.au/wp-content/uploads/2018/05/shutterstock_721093795.jpg"
+        imageUrl="https://img.freepik.com/premium-photo/female-designer-client-working-with-fabric-samples-selecting-fabrics-design-curtains_116407-8577.jpg"
       />
 
-      <ShowroomMap />
+      {/* <ShowroomMap />
 
-      <ClientReviews reviews={reviewsData} />
+      <ClientReviews reviews={reviewsData} /> */}
     </>
   );
 };

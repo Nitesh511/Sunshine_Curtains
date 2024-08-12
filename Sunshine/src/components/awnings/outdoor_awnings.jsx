@@ -2,8 +2,8 @@ import React from "react";
 
 export const OutdoorBlindsAwningsPage = () => {
   return (
-    <div className="bg-[#011d37] text-white py-12 md:max-w-5xl md:ml-32  md:mt-10 mb-10 px-4 sm:px-8 md:px-16 lg:px-24">
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="py-12 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-7xl bg-[#011d37] text-white py-8 px-6 rounded-lg shadow-lg">
         <h1 className="text-3xl font-bold mb-4 text-center">
           With Outdoor Blinds & Awnings, Every Day Is A Celebration.
         </h1>
@@ -31,6 +31,7 @@ export const OutdoorBlindsAwningsPage = () => {
     </div>
   );
 };
+
 
 export const FabricPart = () => {
   return (

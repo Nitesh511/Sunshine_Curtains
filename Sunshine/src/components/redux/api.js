@@ -67,6 +67,13 @@ const Apidata = createApi({
       query: (slug) =>
         `/api/awningproducts?filters[slug][$eq]=${slug}&populate=*`,
     }),
+    createLeed:builder.mutation({
+      query:(formData)=>({
+        url:'/api/leeds',
+        method:'POST',
+        body:formData
+      })
+    })
   }),
 });
 
@@ -89,5 +96,6 @@ export const {
   useGetcurtainsQuery,
   useGetshutterproductdetailsQuery,
   useGetproductshutterQuery,
-  useGetawningsproductdetailsQuery
+  useGetawningsproductdetailsQuery,
+  useCreateLeedMutation
 } = Apidata;

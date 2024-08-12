@@ -82,10 +82,10 @@ const Productdetails = () => {
           {dataToRender.map((items) => (
             <React.Fragment key={items.id}>
               <div className="flex flex-col items-center text-center mb-16">
-                <h1 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
+                <h1 className="text-3xl md:text-4xl font-bold text-customColorRgb mb-4">
                   {items?.attributes?.productdetails.title1}
                 </h1>
-                <p className="text-gray-700 mb-8">
+                <p className=" text-customColorRgb mb-8 text-lg">
                   {items.attributes.productdetails.title2}
                 </p>
               </div>
@@ -113,14 +113,8 @@ const Productdetails = () => {
                 <span
                   dangerouslySetInnerHTML={{
                     __html: items.attributes.productdetails.des
-                      .replace(/( scenario:)/gi, "$1<br><br>")
-                      .replace(/(adjust the blind.)/gi, "$1<br><br>")
-                      .replace(/(frustrating. )/gi, "$1<br><br>")
-                      .replace(/(once more... )/gi, "$1<br><br>")
-                      .replace(/(window coverings.)/gi, "$1<br><br>")
-                      .replace(/(perfect angle.)/gi, "$1<br><br>")
-                      .replace(/(light and privacy.)/gi, "$1<br><br>")
-                      .replace(/(manual adjustments.)/gi, "$1<br><br>")
+                    .replace(/\n+/g, '<br><br>')  
+                    
                   }}
                 />
               }
@@ -138,16 +132,16 @@ const Productdetails = () => {
         ))}
       </div>
       <div className=" font-subheading ">
-        <BookingBanner
-          title="Book Appointment Today And Get a Free $300 Voucher To Use Towards Your Order!"
-          description="Our customer consultants have a wealth of experience and will guide you along the way to creating the home you love. Take the first step and book an appointment with our expert local advisers."
-          buttonText="BOOK APPOINTMENT"
-          buttonLink="#"
-          imageUrl="https://watsonblinds.com.au/wp-content/uploads/2018/05/shutterstock_721093795.jpg"
-        />
+      <BookingBanner
+        title="Book Your Appointment Today and Receive a Free $200 Voucher!"
+        description="Our skilled customer consultants are here to assist you in creating the home you’ve always wanted. Book an appointment with our local experts and start your journey to a beautifully transformed space."
+        buttonText="BOOK NOW"
+        buttonLink="#"
+        imageUrl="https://img.freepik.com/premium-photo/female-designer-client-working-with-fabric-samples-selecting-fabrics-design-curtains_116407-8577.jpg"
+      />
       </div>
-      <FAQs />
-      <ClientReviews />
+      {/* <FAQs />
+      <ClientReviews /> */}
     </>
   );
 };

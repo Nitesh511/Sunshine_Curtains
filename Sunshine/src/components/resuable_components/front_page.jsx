@@ -21,7 +21,7 @@ const FrontPage = ({ imageUrl, title, description, buttonText, buttonLink }) => 
 
             {/* Additional information on the right */}
             <div className="flex-shrink-0 w-full md:w-1/3 flex flex-col justify-center bg-gray-100 p-6 shadow-md">
-                <div className="text-blue-800 font-bold text-2xl text-center mb-4">
+                <div className=" text-black font-bold text-2xl text-center mb-4">
                     {title}
                 </div>
                 <p className="text-gray-700 mb-8 text-center md:text-left">
@@ -29,7 +29,7 @@ const FrontPage = ({ imageUrl, title, description, buttonText, buttonLink }) => 
                 </p>
                 <a
                     href={buttonLink}
-                    className="bg-yellow-500 text-white font-medium py-2 px-6 rounded-md hover:bg-yellow-600 transition block mx-auto text-center "
+                    className=" bg-customColorRgb text-white font-medium py-2 px-6 rounded-md hover:bg-yellow-600 transition block mx-auto text-center "
                 >
                     {buttonText}
                 </a>

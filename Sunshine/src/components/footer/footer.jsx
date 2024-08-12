@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -8,64 +9,53 @@ const Footer = () => {
           <h3 className="text-lg font-bold mb-4">Find a Showroom Near You</h3>
           <ul className="space-y-2">
             <li><a href="#" className="text-white hover:text-black">Sunshine Blinds Canberra</a></li>
-            <li><a href="#" className="text-white hover:text-black">Sunshine Blinds Batemans Bay</a></li>
-            <li><a href="#" className="text-white hover:text-black">Sunshine Blinds Nowra</a></li>
-            <li><a href="#" className="text-white hover:text-black">Sunshine Blinds Wagga</a></li>
-            <li><a href="#" className="text-white hover:text-black">Sunshine Blinds Wollongong</a></li>
-            <li><a href="#" className="text-white hover:text-black">Sunshine Blinds Tweed Heads</a></li>
+
           </ul>
         </div>
         <div className="col-span-1 sm:col-span-2 lg:col-span-1 mt-10">
           <h3 className="text-lg font-bold mb-4">Sunshine Blinds</h3>
           <ul className="space-y-2">
             <li><a href="#" className="text-white hover:text-black">About Us</a></li>
-            <li><a href="#" className="text-white hover:text-black">Contact Us</a></li>
+            <li><Link to={"/contact"} className="text-white hover:text-black">Contact Us</Link></li>
             <li><a href="#" className="text-white hover:text-black">Service Request</a></li>
-            <li><a href="#" className="text-white hover:text-black">Careers</a></li>
-            <li><a href="#" className="text-white hover:text-black">Warranties</a></li>
-            <li><a href="#" className="text-white hover:text-black">Commercial</a></li>
-            <li><a href="#" className="text-white hover:text-black">Blog</a></li>
-            <li><a href="#" className="text-white hover:text-black">FAQS</a></li>
-            <li><a href="#" className="text-white hover:text-black">Terms and Conditions</a></li>
-            <li><a href="#" className="text-white hover:text-black">Privacy Policy</a></li>
+
           </ul>
         </div>
         <div className="col-span-1 sm:col-span-2 lg:col-span-1 mt-10">
           <h3 className="text-lg font-bold mb-4">Blinds</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="text-white hover:text-black">Honeycomb Blinds</a></li>
-            <li><a href="#" className="text-white hover:text-black">Honeycomb Glideshift</a></li>
-            <li><a href="#" className="text-white hover:text-black">Motorised Blinds</a></li>
-            <li><a href="#" className="text-white hover:text-black">Venetian Blinds</a></li>
-            <li><a href="#" className="text-white hover:text-black">Vertical Blinds</a></li>
-            <li><a href="#" className="text-white hover:text-black">Roman Blinds</a></li>
-            <li><a href="#" className="text-white hover:text-black">Roller Blinds</a></li>
-            <li><a href="#" className="text-white hover:text-black">Pleated & Softshade Blinds</a></li>
-            <li><a href="#" className="text-white hover:text-black">Panel Glides</a></li>
-            <li><a href="#" className="text-white hover:text-black">Blinds Batemans Bay</a></li>
-            <li><a href="#" className="text-white hover:text-black">Sunshine Xtreme</a></li>
+            <li><Link to={"/blinds"} className="text-white hover:text-black">Honeycomb Blinds</Link></li>
+            <li><Link to={"/blinds"} className="text-white hover:text-black">Honeycomb Glideshift</Link></li>
+            <li><Link to={"/blinds"} className="text-white hover:text-black">Motorised Blinds</Link></li>
+            <li><Link to={"/blinds"} className="text-white hover:text-black">Venetian Blinds</Link></li>
+            <li><Link to={"/blinds"}className="text-white hover:text-black">Vertical Blinds</Link></li>
+            <li><Link to={"/blinds"}className="text-white hover:text-black">Roman Blinds</Link></li>
+            <li><Link to={"/blinds"} className="text-white hover:text-black">Roller Blinds</Link></li>
+            <li><Link to={"/blinds"} className="text-white hover:text-black">Pleated & Softshade Blinds</Link></li>
+            <li><Link to={"/blinds"} className="text-white hover:text-black">Panel Glides</Link></li>
+            
           </ul>
         </div>
         <div className="col-span-1 sm:col-span-2 lg:col-span-1 mt-10">
           <h3 className="text-lg font-bold mb-4">Curtains</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="text-white hover:text-black">Blockout Curtains</a></li>
-            <li><a href="#" className="text-white hover:text-black">Sheer Curtains</a></li>
-            <li><a href="#" className="text-white hover:text-black">Veri Shades</a></li>
+            <li><Link to={"/curtains"} className="text-white hover:text-black">Blockout Curtains</Link></li>
+            <li><Link  to={"/curtains"}  className="text-white hover:text-black">Sheer Curtains</Link></li>
+            <li><Link to={"/curtains"} className="text-white hover:text-black">Veri Shades</Link></li>
           </ul>
         </div>
         <div className="col-span-1 sm:col-span-2 lg:col-span-1 mt-10">
           <h3 className="text-lg font-bold mb-4">Awnings</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="text-white hover:text-black">Canopy Awning</a></li>
-            <li><a href="#" className="text-white hover:text-black">Folding Arm Awning</a></li>
-            <li><a href="#" className="text-white hover:text-black">Cassita II By Weinor</a></li>
-            <li><a href="#" className="text-white hover:text-black">Semina By Weinor</a></li>
-            <li><a href="#" className="text-white hover:text-black">Sintesi Retractable Roof</a></li>
-            <li><a href="#" className="text-white hover:text-black">Sundream Awnings</a></li>
-            <li><a href="#" className="text-white hover:text-black">Window Awnings</a></li>
-            <li><a href="#" className="text-white hover:text-black">Plaza Viva By Weinor</a></li>
-            <li><a href="#" className="text-white hover:text-black">Zipscreen Awnings</a></li>
+            <li><Link to={"/awnings"} className="text-white hover:text-black">Canopy Awning</Link></li>
+            <li><Link to={"/awnings"} className="text-white hover:text-black">Folding Arm Awning</Link></li>
+            <li><Link to={"/awnings"} className="text-white hover:text-black">Cassita II By Weinor</Link></li>
+            <li><Link to={"/awnings"} className="text-white hover:text-black">Semina By Weinor</Link></li>
+            <li><Link to={"/awnings"} className="text-white hover:text-black">Sintesi Retractable Roof</Link></li>
+            <li><Link to={"/awnings"} className="text-white hover:text-black">Sundream Awnings</Link></li>
+            <li><Link to={"/awnings"} className="text-white hover:text-black">Window Awnings</Link></li>
+            <li><Link to={"/awnings"} className="text-white hover:text-black">Plaza Viva By Weinor</Link></li>
+            <li><Link to={"/awnings"} className="text-white hover:text-black">Zipscreen Awnings</Link></li>
           </ul>
         </div>
       </div>

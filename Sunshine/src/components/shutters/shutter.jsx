@@ -17,6 +17,8 @@ import ClientReviews from "../reviews/reviews";
 import reviewsData from "../reviews/reviews_data";
 import { useGetproductshutterQuery, useGetshuttersQuery } from "../redux/api";
 import LoadingPage from "../loading_page/loadingpage";
+import HelmetData from "../helmet/helmet";
+import { Link } from "react-router-dom";
 
 const Shutter = () => {
   const[shutter, setShutter]= useState([]);
@@ -54,16 +56,17 @@ const Shutter = () => {
   ];
   return (
     <>
+     <HelmetData title={"SUNSHINE | SHUTTERS"}/>
       <div className="bg-white">
         <div className="container mx-auto py-3">
           {/* Main text centered at the top */}
           {shutter.map((items)=>(
             <React.Fragment key={items.id}>
             <div className="flex flex-col items-center text-center mb-16 font-subheading">
-            <h1 className="text-3xl md:text-3xl font-bold text-blue-800 mb-4">
+            <h1 className="text-3xl md:text-3xl font-bold text-customColorRgb mb-4">
             {items.attributes.title1}
             </h1>
-            <p className="text-gray-700 mb-8">
+            <p className=" text-customColorRgb text-lg mb-8">
             {items.attributes.title2}
             </p>
           </div>
@@ -88,8 +91,13 @@ const Shutter = () => {
         <FeatureSection features={features} />
       </div>
 
-      <div className="container mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-0  md:p-10 font-subheading ">
+      <div className="container mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-0 md:p-10 font-subheading cursor-pointer">
         {productShutter.map((item) => (
+          <Link
+            key={item.id}
+            to={`/shutters/${item.attributes.slug}`}
+            className="block"
+          >
           <BlindsSection
             key={item.id}
             title={item.attributes.title}
@@ -98,15 +106,16 @@ const Shutter = () => {
             buttonText={item.attributes.buttontext}
             buttonLink={`/shutters/${item.attributes.slug}`}
           />
+          </Link>
         ))}
       </div>
       <div className=" font-subheading "></div>
       <BookingBanner
-        title="Book Appointment Today And Get a Free $300 Voucher To Use Towards Your Order!"
-        description="Our customer consultants have a wealth of experience and will guide you along the way to creating the home you love. Take the first step and book an appointment with our expert local advisers."
-        buttonText="BOOK APPOINTMENT"
+        title="Book Your Appointment Today and Receive a Free $200 Voucher!"
+        description="Our skilled customer consultants are here to assist you in creating the home you’ve always wanted. Book an appointment with our local experts and start your journey to a beautifully transformed space."
+        buttonText="BOOK NOW"
         buttonLink="#"
-        imageUrl="https://watsonblinds.com.au/wp-content/uploads/2018/05/shutterstock_721093795.jpg"
+        imageUrl="https://img.freepik.com/premium-photo/female-designer-client-working-with-fabric-samples-selecting-fabrics-design-curtains_116407-8577.jpg"
       />
 
       <div className="mt-10 font-subheading ">
@@ -140,12 +149,12 @@ const Shutter = () => {
 
       <ShutterTypes />
 
-      <div className=" md:-mt-24">
+      {/* <div className=" md:-mt-24">
         {" "}
         <FAQs />{" "}
       </div>
 
-      <ClientReviews reviews={reviewsData} />
+      <ClientReviews reviews={reviewsData} /> */}
 
       </div>
     </>

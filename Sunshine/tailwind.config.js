@@ -9,6 +9,9 @@ export default {
         subheading: ["Roboto", "sans-serif"],
         body: ["Roboto", "sans-serif"],
       },
+    colors: {
+        customColorRgb: 'rgb(240, 123, 47)', // Example using RGB
+      },
     },
   },
   plugins: [],
