@@ -10,6 +10,7 @@ import reviewsData from "../reviews/reviews_data";
 import { useGetdashboardproductsQuery, useGetdashboardQuery } from "../redux/api";
 import LoadingPage from "../loading_page/loadingpage";
 import HelmetData from "../helmet/helmet";
+import Gallery from "../gallery/gallery";
 
 
 const Dashboard = () => {
@@ -70,7 +71,7 @@ const Dashboard = () => {
                   <h1 className="text-3xl md:text-3xl font-bold text-customColorRgb mb-4">
                     {items.attributes.title1}
                   </h1>
-                  <p className=" text-customColorRgb mb-8 font-subheading text-lg">
+                  <p className=" text-customColorRgb mb-8 font-subheading text-lg font-bold">
                     {items.attributes.title2}
                   </p>
                 </div>
@@ -127,6 +128,8 @@ const Dashboard = () => {
       {/* <ShowroomMap />
 
       <ClientReviews reviews={reviewsData} /> */}
+
+      <Gallery/>
     </>
   );
 };

@@ -3,89 +3,81 @@ import React from 'react';
 const OutdoorSpacesComponent = () => {
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto font-subheading">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Extend Your Outdoor Spaces & Enjoy Year-Round Comfort
+            Enhance Your Outdoors with Zipscreen Awnings
           </h2>
-         
         </div>
 
         <div className="mt-10 space-y-8">
-        <p className="mt-4 text-lg text-gray-500">
-            Australia's all about the great wide outdoors. We love to live outside, and when you're surrounded by so much wonderful nature, why wouldn't we?
+          <p className="mt-4 text-lg ">
+            Embrace the great outdoors without worrying about the elements. Zipscreen Awnings provide the perfect solution for enjoying your outdoor spaces year-round. Whether it's sunny or rainy, these awnings help create a comfortable environment, allowing you to make the most of your patio, verandah, or any outdoor area.
           </p>
-          <p className="text-lg text-gray-500">
-            Even when we're home, we love to lounge about on the patio, have a drink on the verandah, swim in the sunshine and organise endless barbecues with friends and family. It's all about camaraderie and joy.
+          <p className="text-lg ">
+            Imagine lounging on your patio or hosting a gathering without being bothered by rain or harsh sunlight. Zipscreen Awnings are designed to shield you from the sun, rain, and even insects, ensuring that your outdoor experiences are always enjoyable and stress-free.
           </p>
-          <p className="text-lg text-gray-500">
-            So it does put a damper on things when a typical Aussie storm charges through. Nobody wants to be enjoying a steak, soaked, or have their wine mixed with rainwater. Or have an all-out battle with them creepy-crawlies. Grilled grasshopper anyone?
+          <p className="text-lg ">
+            Not only do Zipscreen Awnings enhance your living experience, but they also add value to your home. By installing a Zipscreen Awning, you’re not just protecting your gatherings from unpredictable weather—you’re also creating an extra living space that boosts your property’s value.
           </p>
-          <p className="text-lg text-gray-500">
-            Having the right shade protecting you from the sun, rain and insects can not only enhance your living experience, it also adds value to your home. Think like a real estate agent for a moment. When you install a Watson Blinds retractable awning, you're not just preventing bad weather from ruining gatherings with family and friends. You're actually creating an extra living space - and adding instant value to your home in the process.
+          <p className="text-lg ">
+            Whether you’re updating an existing space or starting fresh, Zipscreen Awnings offer versatility and style. They can be fitted into almost any space, and we offer a range of options from manual to motorized systems to suit your needs.
           </p>
-          <p className="text-lg text-gray-500">
-            It's a great investment, and one that will stand the test of time.
+          <p className="text-lg">
+            Concerned about space? Zipscreen Awnings are designed to fit seamlessly into your outdoor area without overwhelming it. We provide various styles and sizes, ensuring that you find the perfect solution for your space.
           </p>
-          <p className="text-lg text-gray-500">
-            Whether you're extending an already existing space like a verandah or are looking to create a new one from scratch, awnings can be a versatile solution. Plus, at Watson, we've made them look fantastic too!
-          </p>
-          <p className="text-lg text-gray-500">
-            Worried you don't have room? A retractable awning doesn't have to take up the whole backyard. They can be fitted into just about any space, and here at Watson, we've got everything from Pivot Arm Awnings through to Straight Drop Awnings.
-          </p>
-          <p className="text-lg text-gray-500">
-            Trust us - there's definitely a retractable awning to suit you, including motorized retractable awnings.
+          <p className="text-lg ">
+            Trust Zipscreen Awnings to deliver both functionality and aesthetics, providing you with a high-quality solution for your outdoor living spaces.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
-        <div className="flex items-center justify-center">
-          <img
-            src="https://watsonblinds.com.au/wp-content/uploads/elementor/thumbs/Heading-Image-Template-1-4-qh49lur385giygvwjq4dpj6szbavk78tcggvxsepzc.jpg"
-            alt="image"
-            className="w-full h-auto object-cover"
-          />
+          <div className="flex items-center justify-center">
+            <img
+              src="https://harmonyblindsanddoors.com.au/wp-content/uploads/2021/08/Zipscreen-2.jpg"
+              alt="Zipscreen Awnings"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <div className="bg-white p-8 font-subheading">
+            <h2 className="text-2xl font-bold mb-4">Why Choose Zipscreen Awnings?</h2>
+            <ul className="list-disc list-inside space-y-2">
+              <li className="text-lg">Perfect for residential and commercial applications</li>
+              <li className="text-lg">Modern, sleek design</li>
+              <li className="text-lg">Premium quality fabrics</li>
+              <li className="text-lg">Custom-made to fit your space</li>
+              <li className="text-lg">Full protection from weather elements and insects</li>
+              <li className="text-lg">Durable and long-lasting with a lifetime warranty on in-house products</li>
+              <li className="text-lg">Competitive pricing for top-quality products</li>
+              <li className="text-lg">Available in both manual and motorized options</li>
+            </ul>
+          </div>
+          <div className="flex items-center justify-center">
+            <img
+              src="https://www.bellashuttersandblinds.com.au/uploads/default/files/zipscreen-awnings-11.jpg"
+              alt="Zipscreen Awnings"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <div className="p-8 font-subheading">
+            <h2 className="text-2xl font-bold mb-4">Choosing the Right Zipscreen Awning</h2>
+            <p className="text-lg mb-4">
+              Selecting the ideal Zipscreen Awning involves considering several factors to ensure it meets your specific needs. Consider the level of sun and rain protection you require, as well as the impact on your outdoor space’s overall aesthetic.
+            </p>
+            <p className="text-lg mb-4">
+              Whether you need an awning for intense sunlight, heavy rain, or a versatile option for varying conditions, we offer a range of customizable solutions. Our Zipscreen Awnings can be tailored to manual or motorized operation, providing convenience and effectiveness.
+            </p>
+            <p className="text-lg mb-4">
+              Explore our range of Zipscreen Awnings to find the perfect match for your outdoor area and enjoy a stylish, functional addition to your home or business.
+            </p>
+          </div>
+          <div className="flex items-center justify-center">
+            <img
+              src="https://www.dollarcurtainsandblinds.com.au/app/uploads/2021/09/2.-Zipscreen-Awnings.jpg"
+              alt="Zipscreen Awnings"
+              className="w-full h-auto object-cover"
+            />
+          </div>
         </div>
-        <div className="bg-white p-8 ">
-      <h2 className="text-2xl font-bold mb-4">Why Our Awnings?</h2>
-      <ul className="list-disc list-inside space-y-2">
-        <li className="text-lg">Ideal for private and commercial uses</li>
-        <li className="text-lg">Trend-setting designs</li>
-        <li className="text-lg">High quality fabrics</li>
-        <li className="text-lg">Custom-made locally in our own factory</li>
-        <li className="text-lg">Full privacy and weather protection</li>
-        <li className="text-lg">Lifetime warranty on all products manufactured in-house</li>
-        <li className="text-lg">Unmatched pricing for quality produced</li>
-        <li className="text-lg">Motorisation and manual operation available</li>
-      </ul>
-    </div>
-    <div className="flex items-center justify-center">
-          <img
-            src="https://watsonblinds.com.au/wp-content/uploads/elementor/thumbs/Heading-Image-Template-19-qh4le54g5y9zlwl104jw7gr62o1g1pn0chl4g7b9c8.jpg"
-            alt="image"
-            className="w-full h-auto object-cover"
-          />
-        </div>
-        <div className="p-8 ">
-      <h2 className="text-2xl font-bold mb-4">Considerations for Choosing the Right Shade System</h2>
-      <p className="text-lg mb-4">
-        Choosing the right shade system for different weather conditions isn’t just about picking something off the shelf; it’s a thoughtful process that involves weighing a few important considerations.
-      </p>
-      <p className="text-lg mb-4">
-        When you’re looking for that perfect shade solution, you’re going to want to think about how well it stands up to wind, how it protects you from rain, and how effective it is at blocking out the sun. It’s all about knowing what Mother Nature tends to throw your way and finding a shade system that’s cut out for the job.
-      </p>
-      <p className="text-lg mb-4">
-        Whether you’re after patio awnings, a folding arm awning for windy areas, a fixed canopy for rainy spots, or retractable shades for consistent sun protection, we can help. Here’s a snapshot of our range of awnings, which we can customise for manual (crank) or motorised operation:
-      </p>
-    </div>
-    <div className="flex items-center justify-center">
-          <img
-            src="https://watsonblinds.com.au/wp-content/uploads/elementor/thumbs/Heading-Image-Template-3-qgehb78wwpubzzce0buewm3c5nl6wdic1hdthyku14.jpg"
-            alt="image"
-            className="w-full h-auto object-cover"
-          />
-        </div>
-   
-      </div>
       </div>
     </div>
   );

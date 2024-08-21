@@ -140,13 +140,13 @@ const Blinds_page = () => {
           title2={"Light Filter"}
           title3={"Screen"}
           img1={
-            "https://watsonblinds.com.au/wp-content/uploads/elementor/thumbs/Blockout-pf2l9e3n7heussw8hl2my4pf0xbjm6fp2mn977hdwg-q7ydhnpg2pttjif6zxa5hzonn4aexzaaqoqdbufxy8.jpg"
+            "https://luxweb.azureedge.net/assets/luxaflexbrand/media/hunterdouglasmedia/02_products/02%20product%20headers/vertical-blinds.jpg"
           }
           img2={
-            "https://watsonblinds.com.au/wp-content/uploads/elementor/thumbs/Light-Filter-pf2l8y4dzaszbfjg2w5z9qqkxdiazbo9cfk01i52u8-q7ydhzxcjkajqfxg0kkawelnd4m6q1mt4d7okfxtpc.jpg"
+            "https://images.prismic.io/mrblinds/7449b493-6c60-45bb-8f6d-268ac9ec1d33_vertical-dining-room1.jpg?auto=compress,format"
           }
           img3={
-            "https://watsonblinds.com.au/wp-content/uploads/elementor/thumbs/Screen-1-pf2l7n4ghl0n6xfppbumt2lj83xyaghohyxq1o2rhc-q7ydi7g228kubbmisntbgcpc47l4fmgntefkenmobk.jpg"
+            "https://www.ptblinds.co.uk/wp-content/uploads/2018/06/Perspective-Shale-Grey-Screen-Blind-1.jpg"
           }
         />
       </div>

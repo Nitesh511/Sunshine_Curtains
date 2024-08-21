@@ -66,7 +66,7 @@ const Shutter = () => {
             <h1 className="text-3xl md:text-3xl font-bold text-customColorRgb mb-4">
             {items.attributes.title1}
             </h1>
-            <p className=" text-customColorRgb text-lg mb-8">
+            <p className=" text-customColorRgb text-lg mb-8 font-bold">
             {items.attributes.title2}
             </p>
           </div>
@@ -134,13 +134,13 @@ const Shutter = () => {
           title2={"ROLLER SHUTTERS"}
           title3={"ALUMINIUM SHUTTERS"}
           img1={
-            "https://watsonblinds.com.au/wp-content/uploads/elementor/thumbs/Aluminium-Shutters-pf2lf22l6odn66i7zmdid4e2w76kcqpqavmg6ulqd4.jpg"
+            "https://foreverblinds.com.au/cdn/shop/products/antique-white-poly-pvc-plantation-shutters_851_9f887a7f-5d7b-4514-85f4-36e1acbbd27b_1400x.jpg?v=1581149928"
           }
           img2={
-            "https://watsonblinds.com.au/wp-content/uploads/elementor/thumbs/Roller-Shutters-pf2lfg6616wy0bxqpagwwitzsz92k79pcteqe00trs.jpg"
+            "https://domesticrollersystems.com/wp-content/uploads/2023/10/domestic-roller-shutter-installed-on-outdoor-kitchen-black.jpg"
           }
           img3={
-            "https://watsonblinds.com.au/wp-content/uploads/elementor/thumbs/External-Shutters-pf2lce71tkqe9ydhjgxkasl2awb4jm53xp2x8mjvzs.jpg"
+            "https://www.security-shutters.co.uk/wp-content/uploads/2021/03/Aluminium-security-shutters-external-5-min.jpg"
           }
         />
       </div>

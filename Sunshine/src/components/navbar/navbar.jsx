@@ -1,77 +1,58 @@
 import React, { useState } from "react";
 import logo from "../../assets/removebg.png";
 import { HiMenuAlt3 } from "react-icons/hi";
+import { RiCloseLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import frontimg from "../../assets/front.jpg";
+import frontimg from "../../assets/back123.jpg";
+import newlogo from "../../assets/logo_black.png";
+import { MdPermPhoneMsg } from "react-icons/md";
+import { MdSimCardDownload } from "react-icons/md";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  //For Menu items Toogle
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   const closeMenu = () => {
-    setMenuOpen(false);
+    setIsOpen(false);
   };
 
   return (
     <nav
-      className="bg-cover  shadow-md"
+      className="bg-cover shadow-md"
       style={{ backgroundImage: `url(${frontimg})` }}
     >
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center ">
-        <div className="flex items-center ">
-          <Link to={"/"}>
-            {" "}
-            <img src={logo} alt="Sunshine Logo" className="h-24 md:h-32  " />
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        {/* Logo Section */}
+        <div className="flex-grow flex justify-center md:justify-center">
+          <Link to={"/"} className="flex justify-center">
+            <img
+              src={newlogo}
+              alt="Sunshine Logo"
+              className="h-52 md:h-72"
+            />
           </Link>
-
-          <div className="flex flex-col mt-2">
-            <span className="text-white font-subheading text-2xl font-bold ">
-              SUN SHINE{" "}
-            </span>
-
-            <span className="text-white text-xl -mt-1">BLINDS CANBERRA</span>
-            {/* <span className="text-gray-500 text-sm mt-1">
-                            CURTAINS | BLINDS | AWNINGS | SHUTTERS
-                        </span> */}
-          </div>
-        </div>
-
-        <div className=" items-center hidden lg:block  ">
-          <a
-            href="#"
-            className=" bg-customColorRgb text-white font-subheading py-2 px-4 rounded-xl mr-4 hover:bg-yellow-600"
-          >
-            BOOK APPOINTMENT
-          </a>
-          <a
-            href="#"
-            className="text-white font-subheading hover:bg-green-700 bg-gray-500 py-2 px-4 rounded-xl"
-          >
-            DOWNLOAD BROCHURE
-          </a>
         </div>
 
         {/* Hamburger Menu Icon */}
-        <button className="text-2xl lg:hidden" onClick={toggleMenu}>
-          <HiMenuAlt3 />
+        <button
+          className="text-2xl lg:hidden text-black"
+          onClick={toggleMenu}
+        >
+          {isOpen ? <RiCloseLine className="text-red-600" /> : <HiMenuAlt3 />}
         </button>
       </div>
 
       {/* Menu */}
-      <div
-        className={` text-black ${
-          isOpen ? "block" : "hidden"
-        } lg:block`}
-      >
-        <div className="container mx-auto px-4 py-3 flex flex-col lg:flex-row md:items-center md:justify-center border-b-4 border-gray-300">
-          <ul className="flex flex-col lg:flex-row lg:space-x-8 space-y-4 lg:space-y-0 text-lg font-subheading text-white">
+      <div className={`text-black ${isOpen ? "block" : "hidden"} lg:block `}>
+        <div className="container mx-auto py-5 flex flex-col  lg:flex-row md:items-center justify-center bg-orange-600 max-w-full -mt-8">
+          <ul className="flex flex-col lg:flex-row lg:ml-40 lg:space-x-8 space-y-4 lg:space-y-0 items-center text-center font-bold text-xl font-subheading text-white">
             <li>
               <Link
                 to="/"
-                className="block hover:text-orange-600"
+                className="block hover:text-black"
                 onClick={closeMenu}
               >
                 HOME
@@ -80,7 +61,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/blinds"
-                className="block hover:text-orange-600"
+                className="block hover:text-black"
                 onClick={closeMenu}
               >
                 BLINDS
@@ -89,7 +70,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/curtains"
-                className="block hover:text-orange-600"
+                className="block hover:text-black"
                 onClick={closeMenu}
               >
                 CURTAINS
@@ -98,7 +79,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/shutters"
-                className="block hover:text-orange-600"
+                className="block hover:text-black"
                 onClick={closeMenu}
               >
                 SHUTTERS
@@ -107,7 +88,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/awnings"
-                className="block hover:text-orange-600"
+                className="block hover:text-black"
                 onClick={closeMenu}
               >
                 AWNINGS
@@ -116,13 +97,28 @@ const Navbar = () => {
             <li>
               <Link
                 to="/contact"
-                className="block hover:text-orange-600"
+                className="block hover:text-black"
                 onClick={closeMenu}
               >
                 CONTACT US
               </Link>
             </li>
           </ul>
+
+          <div className="flex justify-center lg:justify-end mt-4 lg:mt-0 cursor-pointer lg:ml-32">
+            <ul className="flex space-x-4">
+              <li>
+                <a href="tel:0435 595 003">
+                  <MdPermPhoneMsg className="text-white" style={{ fontSize: "30px" }} />
+                </a>
+              </li>
+              <li>
+                <a href="tel:0435 595 003">
+                  <MdSimCardDownload className="text-white" style={{ fontSize: "30px" }} />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>

@@ -26,7 +26,7 @@ const Mascot = () => {
             {visible && (
                 <div
                     onClick={handleClick}
-                    className="fixed bottom-0 right-0 m-4 mr-1 cursor-pointer animate-bounce"
+                    className="fixed bottom-0 right-0 m-4  cursor-pointer animate-bounce z-10" 
                 >
                     <img src={mascot} alt="Mascot" className="w-32 h-auto" />
                 </div>

@@ -68,7 +68,7 @@ const Curtains_Page = () => {
           <h1 className="text-3xl md:text-3xl font-bold text-customColorRgb mb-4">
             {items.attributes.title1}
           </h1>
-          <p className=" text-customColorRgb text-lg mb-8">{items.attributes.title2}</p>
+          <p className=" text-customColorRgb text-lg mb-8 font-bold">{items.attributes.title2}</p>
         </div>
 
         <div className="-mt-32 font-subheading text-base">
@@ -141,12 +141,12 @@ const Curtains_Page = () => {
         title1={"Double & Triple pinch pleat"}
         title2={"Box pleat"}
         title3={"Pencil pleat"}
-        img1={"https://watsonblinds.com.au/wp-content/uploads/2021/08/1c.png"}
-        img2={"https://watsonblinds.com.au/wp-content/uploads/2021/08/2c.png"}
-        img3={"https://watsonblinds.com.au/wp-content/uploads/2021/08/3c.png"}
+        img1={"https://static.hillarys.co.uk/asset/media/38805/hil-curt-header-triple_pinchpleat-folia-sage-1.jpg?cb=20230109102435&mcb=5f884e47a7424cfe86340315ccaafed0"}
+        img2={"https://countryblinds.com.au/wp-content/uploads/2021/06/zepel-pinch-pleat.jpg"}
+        img3={"https://www.harrycorry.com/media/catalog/product/cache/5d49006cb47e65faaa722154ec2f7208/p/r/prd_4518835_moonlight-silver-edit_4h9ye7qetrp78l4s.jpg"}
       />
 
-      <div className=" font-subheading ">
+      <div className=" font-subheading mt-10 ">
         <Tiebacks />
 
         {/* <FAQs />

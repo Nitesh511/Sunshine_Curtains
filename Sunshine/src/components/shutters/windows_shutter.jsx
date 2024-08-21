@@ -112,14 +112,14 @@ export const ShutterTypes = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="flex items-center justify-center">
           <img
-            src="https://watsonblinds.com.au/wp-content/uploads/2021/08/circle-shape.png"
+            src="https://www.perfectfitshutters.com/wp-content/uploads/2023/06/DSC00134-scaled.jpg"
             alt="image"
             className="w-full h-auto object-cover"
           />
         </div>
         <div className="flex items-center justify-center">
           <img
-            src="https://watsonblinds.com.au/wp-content/uploads/2021/08/20200531_112226-sml.png"
+            src="https://images.squarespace-cdn.com/content/v1/5e28c9b685f3054ffd93bf7f/1581604281020-92M7GT2Y4O4EPT0D5TDB/special-shapes-shutters.png"
             alt="image"
             className="w-full h-auto object-cover"
           />

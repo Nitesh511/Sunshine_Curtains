@@ -28,8 +28,8 @@ const FrontPage = ({ imageUrl, title, description, buttonText, buttonLink }) => 
                     {formattedDescription}
                 </p>
                 <a
-                    href={buttonLink}
-                    className=" bg-customColorRgb text-white font-medium py-2 px-6 rounded-md hover:bg-yellow-600 transition block mx-auto text-center "
+                    href="tel:0435 595 003"
+                    className=" bg-customColorRgb text-white font-bold py-2 px-6 rounded-md hover:bg-yellow-600 transition block mx-auto text-center "
                 >
                     {buttonText}
                 </a>

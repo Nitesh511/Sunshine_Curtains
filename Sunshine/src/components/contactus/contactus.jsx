@@ -15,24 +15,24 @@ const ContactUs = () => {
           <p className="mb-4">We'd love to hear from you! Please fill out the form below or use the contact details to reach us directly.</p>
           
           <div className="mb-4">
-      <div className="flex items-center mb-2">
+      <div className="flex items-center mb-2 text-orange-600 cursor-pointer">
         <FaMapMarkerAlt className="text-xl mr-2" />
-        <span>Canberra, ACT</span>
+        <span >Canberra, ACT</span>
       </div>
-      <div className="flex items-center mb-2">
-        <a href="tel:0435595003" className="flex items-center text-blue-500 hover:underline">
+      <div className="flex items-center mb-2 text-orange-600">
+        <a href="tel:0435595003" className="flex items-center text-orange-600 hover:underline">
           <FaPhone className="text-xl mr-2" />
           <span>0435 595 003</span>
         </a>
       </div>
       <div className="flex items-center mb-2">
-        <a href="tel:0435595003" className="flex items-center text-blue-500 hover:underline">
+        <a href="tel:0435595003" className="flex items-center text-orange-600 hover:underline">
           <FaPhone className="text-xl mr-2" />
           <span>0452 398 100</span>
         </a>
       </div>
       <div className="flex items-center">
-        <a href="mailto:admin@sunshineblindscanberra.com" className="flex items-center text-blue-500 hover:underline">
+        <a href="mailto:admin@sunshineblindscanberra.com" className="flex items-center text-orange-600 hover:underline">
           <FaEnvelope className="text-xl mr-2" />
           <span>admin@sunshineblindscanberra.com</span>
         </a>
@@ -89,7 +89,7 @@ const ContactUs = () => {
             </div>
             <button
               type="submit"
-              className="w-full px-4 py-2 font-light bg-blue-500 text-white rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+              className="w-full px-4 py-2 font-light bg-orange-600 font-lg font-subheading text-white rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500"
             >
               Send Message
             </button>

@@ -71,7 +71,7 @@ const Awnings_Page = () => {
                   <h1 className="text-3xl md:text-3xl font-bold text-customColorRgb mb-4">
                     {items.attributes.title1}
                   </h1>
-                  <p className=" text-customColorRgb text-lg mb-8">
+                  <p className=" text-customColorRgb text-lg font-bold mb-8">
                     {items.attributes.title2}
                   </p>
                 </div>
@@ -97,7 +97,7 @@ const Awnings_Page = () => {
 
         <OutdoorBlindsAwningsPage />
 
-        <div className="container mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-0 md:p-10 font-subheading cursor-pointer">
+        {/* <div className="container mx-auto py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-0 md:p-10 font-subheading cursor-pointer">
           {awningproducts.map((item) => (
             <Link
             key={item.id}
@@ -114,7 +114,7 @@ const Awnings_Page = () => {
             />
             </Link>
           ))}
-        </div>
+        </div> */}
 
         <BookingBanner
         title="Book Your Appointment Today and Receive a Free $200 Voucher!"
@@ -127,7 +127,7 @@ const Awnings_Page = () => {
         <OutdoorSpacesComponent />
       </div>
 
-      <ChooseTransparency
+      {/* <ChooseTransparency
         title={"Choose Your Transparency"}
         title1={"ALPHA SRS"}
         title2={"SEMINA"}
@@ -173,10 +173,10 @@ const Awnings_Page = () => {
             "https://watsonblinds.com.au/wp-content/uploads/elementor/thumbs/Docril-Photo-awnings-q78kppy42yjt35zje215ufm1kdrqqixie5rv6u8of4.jpeg"
           }
         />
-      </div>
+      </div> */}
 
       <div className=" font-subheading ">
-        <FabricPart />
+        {/* <FabricPart /> */}
 
         {/* <FAQs />
 

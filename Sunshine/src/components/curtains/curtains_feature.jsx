@@ -82,20 +82,22 @@ export const CurtainsFeature = () => {
         </div>
       </div>
 
+    
+
       <div className="bg-white p-8 max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex items-center justify-center">
             <img
-              src="https://watsonblinds.com.au/wp-content/uploads/elementor/thumbs/web_hero_automation_v2-2-pf2mj3z423jnsu4eoivsw1e8hli3rxerlj54rllj8g.jpg"
+                  src="https://bestcurtainsuae.com/wp-content/uploads/2024/03/automated-blinds-1.webp"
               alt="image"
-              className="w-full h-auto object-cover"
+              className="w-full h-72 object-cover"
             />
           </div>
           <div className="flex items-center justify-center">
             <img
-              src="https://watsonblinds.com.au/wp-content/uploads/2021/08/Motorised.jpg"
+               src="https://callistusblinds.com/wp-content/uploads/2020/08/day-night-automation.jpg"
               alt="image"
-              className="w-full h-auto object-cover"
+              className="w-full h-72 object-cover"
             />
           </div>
         </div>
@@ -114,23 +116,23 @@ export const Tiebacks=()=>{
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-10">
         <div className="flex items-center justify-center">
           <img
-            src="https://watsonblinds.com.au/wp-content/uploads/2021/08/tiebacks.jpg"
+            src="https://i.ebayimg.com/images/g/TdoAAOSwBItj9TFw/s-l1200.jpg"
             alt="image"
-            className="w-full h-auto object-cover"
+            className="w-full h-96 object-cover"
           />
         </div>
         <div className="flex items-center justify-center">
           <img
-            src="https://watsonblinds.com.au/wp-content/uploads/2021/08/rope-tiebacks.jpg"
+            src="https://m.media-amazon.com/images/I/71X0G2MTRtL._AC_UF894,1000_QL80_.jpg"
             alt="image"
-            className="w-full h-auto object-cover"
+            className="w-full h-96 object-cover"
           />
         </div>
         <div className="flex items-center justify-center">
           <img
-            src="https://watsonblinds.com.au/wp-content/uploads/2021/08/grey-tiebacks.jpg"
+            src="https://theyellowdwelling.com/cdn/shop/files/BohowoodenbeadCottoncurtaintiebackwithtassels_205fdb81-5363-4e03-91b2-7d6cddc24f03.jpg?v=1722422249"
             alt="image"
-            className="w-full h-auto object-cover"
+            className="w-full h-96 object-cover"
           />
         </div>
 
