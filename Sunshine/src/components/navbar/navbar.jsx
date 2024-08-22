@@ -7,6 +7,7 @@ import frontimg from "../../assets/back123.jpg";
 import newlogo from "../../assets/logo_black.png";
 import { MdPermPhoneMsg } from "react-icons/md";
 import { MdSimCardDownload } from "react-icons/md";
+import stamp from "../../assets/Asset.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,10 +21,15 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className="bg-cover shadow-md"
-      style={{ backgroundImage: `url(${frontimg})` }}
-    >
+    <nav className="relative bg-cover shadow-md" style={{ backgroundImage: `url(${frontimg})` }}>
+      {/* Stamp Image */}
+      <img
+        src={stamp}
+        alt="Sunshine Logo"
+        className="absolute top-0 left-0 h-16 md:h-24 z-10"
+        style={{ marginLeft: '20px', marginTop: '20px' }}  // Adjust the margins as needed
+      />
+
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo Section */}
         <div className="flex-grow flex justify-center md:justify-center">
@@ -46,8 +52,8 @@ const Navbar = () => {
       </div>
 
       {/* Menu */}
-      <div className={`text-black ${isOpen ? "block" : "hidden"} lg:block `}>
-        <div className="container mx-auto py-5 flex flex-col  lg:flex-row md:items-center justify-center bg-orange-600 max-w-full -mt-8">
+      <div className={`text-black ${isOpen ? "block" : "hidden"} lg:block`}>
+        <div className="container mx-auto py-5 flex flex-col lg:flex-row md:items-center justify-center bg-orange-600 max-w-full -mt-8">
           <ul className="flex flex-col lg:flex-row lg:ml-40 lg:space-x-8 space-y-4 lg:space-y-0 items-center text-center font-bold text-xl font-subheading text-white">
             <li>
               <Link

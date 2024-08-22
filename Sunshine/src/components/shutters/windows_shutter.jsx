@@ -1,8 +1,17 @@
 import React from "react";
+import frontimg from "../../assets/Shutters.svg";
 
 export const WindowShutterSection = () => {
   return (
-    <div className="bg-white p-8 max-w-5xl mx-auto">
+    <div
+    className="bg-cover bg-center bg-no-repeat"
+    style={{
+      backgroundImage: `url(${frontimg})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  >
+    <div className="bg-white p-8 max-w-5xl mx-auto mt-2">
       <h2 className="text-2xl font-bold mb-4 text-center">
         Create A Space You’ll Love To Live In With Window Shutters{" "}
       </h2>
@@ -51,6 +60,7 @@ export const WindowShutterSection = () => {
         <li>Available in a range of finishes</li>
         <li>Ultimate light control</li>
       </ul>
+    </div>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
-import frontimg from "../../assets/epx.svg";
+import frontimg from "../../assets/curtainback.svg";
+
 
 export const WindowBlindsSection = () => {
   return (
@@ -12,7 +13,8 @@ export const WindowBlindsSection = () => {
     
       }}
     >
-      <div className="bg-transparent p-8 max-w-5xl mx-auto">
+
+      <div className="bg-transparent p-8 max-w-5xl mx-auto block">
         <h2 className="text-2xl font-bold mb-4 text-center">
           Window Blinds For Every Reason And Season
         </h2>

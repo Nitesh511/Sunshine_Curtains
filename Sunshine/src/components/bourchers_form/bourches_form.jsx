@@ -53,7 +53,8 @@ const BrochureRequestForm = () => {
   }, [isSuccess]);
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-8 max-w-3xl mx-auto">
+    <div className='bg-gray-100 '>
+    <div className=" shadow-lg rounded-lg p-8 max-w-3xl mx-auto">
       <h2 className="text-2xl font-bold mb-4 text-center">Brochure Request</h2>
       <p className="text-gray-600 mb-6">
         Please enter your details below so we can make sure you receive our brochure download link.
@@ -152,6 +153,7 @@ const BrochureRequestForm = () => {
           {isError && <p className="text-red-500 mt-4">An error occurred. Please try again.</p>}
         </div>
       </form>
+    </div>
     </div>
   );
 };

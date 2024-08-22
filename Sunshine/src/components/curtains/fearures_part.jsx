@@ -1,9 +1,17 @@
 import React from "react";
+import frontimg from "../../assets/Curtains.svg";
 
 const FeaturesPart = () => {
   return (
-    <>
-      <div className="py-8 px-4 bg-gray-50">
+    <div
+      className="bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url(${frontimg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+     
         <div className="max-w-4xl mx-auto">
           <h2 className="text-center text-2xl font-bold mb-4">
             Choose Your Style
@@ -19,13 +27,7 @@ const FeaturesPart = () => {
             and tiebacks. If all that just sounded foreign to you, no need to
             stress. We’re right here to walk you through it all.
           </p>
-        </div>
-      </div>
 
-      {/* Next Part */}
-
-      <div className=" -mt-8 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
           <h2 className="text-center text-2xl font-bold mb-4">
             Choose Your Pleats (Headings)
           </h2>
@@ -52,8 +54,8 @@ const FeaturesPart = () => {
             style.
           </p>
         </div>
-      </div>
-    </>
+    
+    </div>
   );
 };
 
